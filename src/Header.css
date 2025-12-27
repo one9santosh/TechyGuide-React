@@ -170,6 +170,7 @@ nav ul li a:hover {
     .hamburger { 
         display: block; 
         color: var(--secondary-color); 
+        margin-left: auto;
     }
     
     nav ul {
