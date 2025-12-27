@@ -1,0 +1,124 @@
+/* CSS Variables (needed for colors) */
+/* Removed local :root override - now uses global variables from index.css */
+
+/* Container (used by hero-content) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* General Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: 
+        linear-gradient(
+            to bottom, 
+            rgba(10, 50, 120, 0.92) 0%,   
+            rgba(0, 86, 179, 0.88) 60%,   
+            rgba(255, 255, 255, 1) 100%   
+        ),
+        url('assets/hero-bg.jpg') no-repeat center center/cover;
+    
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero .highlight {
+    color: var(--accent-color);
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 35px;
+}
+
+.btn-hero-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-right: 15px;
+    box-shadow: 0 4px 15px rgba(240, 154, 45, 0.3);
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(240, 154, 45, 0.4);
+}
+
+.btn-hero-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+}
+
+.btn-hero-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero h1 { 
+        font-size: 2.2rem; 
+    }
+    
+    .hero .highlight { 
+        display: block; 
+    }
+    
+    .hero-buttons { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .btn-hero-primary, 
+    .btn-hero-secondary { 
+        margin: 0; 
+        width: 100%; 
+    }
+}
+
+/* Additional mobile override from responsive section */
+@media (max-width: 768px) {
+    .hero { 
+        height: auto; 
+        padding: 100px 0; 
+    }
+    
+    .hero h1 { 
+        font-size: 2rem; 
+    }
+}

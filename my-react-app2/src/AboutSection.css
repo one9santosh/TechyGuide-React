@@ -1,0 +1,47 @@
+ .about {
+	padding: 60px 0;
+	background: var(--white);
+}
+
+.about .lead-text {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--secondary-color);
+	margin-bottom: 15px;
+}
+
+.stats {
+	background-color: #0a5ab1;
+	color: var(--white);
+	padding: 40px 0;
+	text-align: center;
+}
+
+.stats-grid {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.stat-item h3 {
+	font-size: 2.5rem;
+	color: var(--white);
+	margin-bottom: 5px;
+}
+
+.stats-footer {
+	border-top: 1px solid rgba(255,255,255,0.3);
+	padding-top: 20px;
+}
+
+.stats-footer p {
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+	.stats-grid {
+		flex-direction: column;
+		gap: 30px;
+	}
+}

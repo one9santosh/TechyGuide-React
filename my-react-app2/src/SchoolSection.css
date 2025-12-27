@@ -1,0 +1,115 @@
+.schools-section {
+	padding: 80px 0;
+	background-color: #fff9f0;
+}
+
+.school-tab-header {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.school-tab-link {
+	background-color: #d1d5db;
+	border: none;
+	padding: 12px 25px;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #4b5563;
+	cursor: pointer;
+	border-radius: 8px 8px 0 0;
+	flex: 1;
+	min-width: 150px;
+	transition: 0.3s;
+}
+
+.school-tab-link:hover {
+	background-color: #9ca3af;
+	color: white;
+}
+
+.school-tab-link.active:nth-child(1) { background-color: #003366; color: white; }
+.school-tab-link.active:nth-child(2) { background-color: #F09A2D; color: white; }
+.school-tab-link.active:nth-child(3) { background-color: #a855f7; color: white; }
+.school-tab-link.active:nth-child(4) { background-color: #0d1b2a; color: white; }
+
+.school-content-box {
+	background: white;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	padding: 40px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	top: -1px;
+}
+
+.school-tab-content {
+	display: none;
+	animation: fadeEffect 0.5s;
+}
+
+.school-desc {
+	color: #666;
+	margin-bottom: 25px;
+	font-size: 1.05rem;
+}
+
+.school-list {
+	list-style: none;
+}
+
+.school-list li {
+	margin-bottom: 15px;
+	padding-left: 25px;
+	position: relative;
+	color: #374151;
+	font-weight: 500;
+}
+
+.school-list li::before {
+	content: "•";
+	color: #003366;
+	font-size: 1.5rem;
+	position: absolute;
+	left: 0;
+	top: -6px;
+}
+
+/* Shared tab grid layout reused from tab styles */
+.tab-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	align-items: center;
+}
+
+.tab-text h3 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+}
+
+.tab-image img {
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+	width: 100%;
+}
+
+@keyframes fadeEffect {
+	from {opacity: 0; transform: translateY(10px);} 
+	to {opacity: 1; transform: translateY(0);} 
+}
+
+@media (max-width: 768px) {
+	.tab-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.tab-image {
+		order: -1;
+	}
+}
