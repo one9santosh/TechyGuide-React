@@ -473,6 +473,13 @@ function ImpactProgram() {
                   className="gallery-card"
                   key={idx}
                   onClick={() => setLightbox({ open: true, src: img.src, alt: img.alt })}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      setLightbox({ open: true, src: img.src, alt: img.alt });
+                    }
+                  }}
                 >
                   <div className="gallery-image-wrap">
                     <img src={img.src} alt={img.alt} />

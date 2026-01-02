@@ -163,6 +163,12 @@ nav ul li a:hover {
 
 /* --- Mobile Responsiveness for Header --- */
 @media (max-width: 768px) {
+    .container {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+    
     .nav-container { 
         position: relative; 
     }
@@ -181,7 +187,7 @@ nav ul li a:hover {
         width: 100%;
         background: var(--white);
         flex-direction: column;
-        padding: 20px 0;
+        padding: 20px 0 20px 20px;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
@@ -222,5 +228,13 @@ nav ul li a:hover {
     .dropdown:hover i {
         transform: rotate(180deg);
         transition: transform 0.3s;
+    }
+
+    nav ul li a {
+        text-align: left;
+    }
+
+    .dropdown-menu li a {
+        text-align: left;
     }
 }
