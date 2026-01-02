@@ -55,6 +55,17 @@ function Header() {
 
   return (
     <>
+      <style>{`
+        @media (max-width: 768px) {
+          #nav-links {
+            left: -100% !important;
+            right: auto !important;
+          }
+          #nav-links.active {
+            left: 0 !important;
+          }
+        }
+      `}</style>
       <div className="top-bar" id="home">
         <div className="container">
           <span>
