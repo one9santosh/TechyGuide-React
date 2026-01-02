@@ -39,7 +39,6 @@ function ImpactProgram() {
     { src: images.workshop, alt: "Workshop", category: "workshop" },
   ];
   const [lightbox, setLightbox] = useState({ open: false, src: "", alt: "" });
-  const [galleryFilter, setGalleryFilter] = useState("all");
   const rootRef = useRef(null);
 
   useEffect(() => {
