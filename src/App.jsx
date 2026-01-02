@@ -18,7 +18,7 @@ import WhatsAppButton from './WhatsAppButton.jsx'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/TechyGuide-React/">
       <Header/>
       <Routes>
         <Route path="/" element={<HomePage />} />
