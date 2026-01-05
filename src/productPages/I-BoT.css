@@ -1,0 +1,740 @@
+/* Scoped styles for I-Bot page */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+.ibot-page {
+    --primary-orange: #f5a623;
+    --primary-blue: #0056b3;
+    --text-dark: #333;
+    --text-white: #ffffff;
+    --bg-light: #f4f7f6;
+    --font-tech: 'Orbitron', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: #ffffff;
+}
+
+.ibot-page * { box-sizing: border-box; }
+.ibot-page h1, .ibot-page h2, .ibot-page h3, .ibot-page h4 { font-weight: 700; }
+.ibot-page a { text-decoration: none; color: inherit; }
+
+/* ===== HERO SECTION ===== */
+.ibot-page .hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+    color: var(--text-white);
+    overflow: hidden;
+}
+
+.ibot-page .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(120deg, rgba(7, 89, 232, 0.731) 0%, rgba(95, 92, 237, 0.356) 100%);
+    z-index: 1;
+}
+
+.ibot-page .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 0 20px;
+    color: var(--text-white);
+    margin-top: -20px;
+}
+
+.ibot-page .brand-name {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    color: var(--text-white);
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.ibot-page .hero-desc {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+.ibot-page .hero-bottom-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.ibot-page .btn {
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.ibot-page .btn-orange {
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(245, 166, 35, 0.4);
+}
+.ibot-page .btn-orange:hover { transform: translateY(-3px); background-color: #e09612; }
+
+/* ===== INTRODUCTION SECTION ===== */
+.ibot-page .intro-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8f1f8 100%);
+}
+
+.ibot-page .intro-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ibot-page .intro-section h2 {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ibot-page .intro-tagline {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.ibot-page .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.ibot-page .intro-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+/* ===== FEATURES SECTION ===== */
+.ibot-page .features-section {
+    padding: 0;
+    background: #ffffff;
+}
+
+.ibot-page .features-section h2 {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 50px;
+}
+
+.ibot-page .features-container {
+    width: 100%;
+    margin: 0;
+}
+
+.ibot-page .feature-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 70px 6vw;
+    min-height: 80vh;
+}
+
+.ibot-page .feature-item.feature-left {
+    grid-template-columns: 1fr 1fr;
+}
+
+.ibot-page .feature-item.feature-right {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Explicit grid placement to alternate image alignment */
+.ibot-page .feature-item.feature-left .feature-image { grid-column: 1; }
+.ibot-page .feature-item.feature-left .feature-content { grid-column: 2; }
+.ibot-page .feature-item.feature-right .feature-content { grid-column: 1; }
+.ibot-page .feature-item.feature-right .feature-image { grid-column: 2; }
+
+/* Distinct backgrounds for each full-width block */
+.ibot-page .feature-bg-1 { background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 100%); }
+.ibot-page .feature-bg-2 { background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%); }
+.ibot-page .feature-bg-3 { background: linear-gradient(135deg, #ecfdf3 0%, #dcfce7 100%); }
+.ibot-page .feature-bg-4 { background: linear-gradient(135deg, #fdf2f8 0%, #ffe4e6 100%); }
+
+.ibot-page .feature-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.ibot-page .feature-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ibot-page .feature-content h3 {
+    font-size: 1.8rem;
+    color: #1e40af;
+    margin-bottom: 15px;
+}
+
+.ibot-page .feature-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.ibot-page .feature-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ibot-page .feature-points li {
+    padding: 10px 0;
+    color: #1e40af;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ===== KIT SECTION ===== */
+.ibot-page .kit-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fce7f3 100%);
+}
+
+.ibot-page .kit-section h2 {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    color: #d97706;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ibot-page .kit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.ibot-page .kit-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.ibot-page .kit-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ibot-page .kit-info h3 {
+    font-size: 1.8rem;
+    color: #d97706;
+    margin-bottom: 15px;
+}
+
+.ibot-page .kit-info > p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.ibot-page .kit-components {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.ibot-page .component-column h4 {
+    font-size: 1.1rem;
+    color: #d97706;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.ibot-page .component-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ibot-page .component-column li {
+    padding: 8px 0;
+    color: #555;
+    font-size: 0.9rem;
+    padding-left: 20px;
+    position: relative;
+}
+
+.ibot-page .component-column li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #d97706;
+    font-weight: bold;
+}
+
+/* ===== TECHNOLOGY SECTION ===== */
+.ibot-page .technology-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #e3f2fd 100%);
+}
+
+.ibot-page .technology-section h2 {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ibot-page .section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.ibot-page .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.ibot-page .tech-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #1976d2;
+}
+
+.ibot-page .tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.ibot-page .tech-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.ibot-page .tech-card h3 {
+    font-size: 1.3rem;
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.ibot-page .tech-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== PROJECTS SECTION ===== */
+.ibot-page .projects-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.ibot-page .projects-section h2 {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.ibot-page .projects-scroll {
+    display: flex;
+    gap: 25px;
+    overflow-x: scroll;
+    padding: 30px 20px;
+    margin: 0 auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 1300px;
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ibot-page .projects-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.ibot-page .project-card {
+    min-width: 280px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.ibot-page .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.ibot-page .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.ibot-page .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.ibot-page .project-card h4 {
+    font-size: 1.1rem;
+    color: #1e40af;
+    padding: 15px 15px 8px;
+    margin: 0;
+}
+
+.ibot-page .project-card p {
+    padding: 0 15px 15px;
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+.ibot-page .testimonials-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fce7f3 0%, #dbeafe 100%);
+}
+
+.ibot-page .testimonials-section h2 {
+    font-family: var(--font-tech);
+    font-size: 2.5rem;
+    color: #e11d48;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ibot-page .testimonials-scroll {
+    display: flex;
+    gap: 25px;
+    overflow-x: scroll;
+    padding: 20px;
+    margin: 0 auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 1300px;
+    will-change: scroll-position;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ibot-page .testimonials-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.ibot-page .testimonial-card {
+    min-width: 320px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.ibot-page .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.ibot-page .stars {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    letter-spacing: 3px;
+}
+
+.ibot-page .testimonial-text {
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.ibot-page .testimonial-author {
+    font-weight: 700;
+    color: #1e40af;
+    font-size: 0.9rem;
+    margin: 10px 0 0;
+}
+
+/* ===== FORM SECTION ===== */
+.ibot-page .form-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #6b5b95 0%, #2d3436 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.ibot-page .form-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 107, 157, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+}
+
+.ibot-page .form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.ibot-page .form-section h2 {
+    font-family: var(--font-tech);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ibot-page .form-container > p {
+    text-align: center;
+    color: #ffd700;
+    font-family: var(--font-body);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.ibot-page .inquiry-form {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.ibot-page .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.ibot-page .form-row input,
+.ibot-page .form-row select,
+.ibot-page .inquiry-form textarea {
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.ibot-page .form-row input:focus,
+.ibot-page .form-row select:focus,
+.ibot-page .inquiry-form textarea:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.ibot-page .inquiry-form textarea {
+    width: 100%;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.ibot-page .form-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
+}
+
+.ibot-page .form-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(25, 118, 210, 0.4);
+}
+
+.ibot-page .form-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .ibot-page .features-section {
+        padding: 20px 0 0;
+    }
+
+    .ibot-page .feature-item {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 0;
+        min-height: auto;
+        padding: 50px 20px;
+    }
+
+    /* On mobile, reset explicit grid columns to stack naturally */
+    .ibot-page .feature-item.feature-left .feature-image,
+    .ibot-page .feature-item.feature-left .feature-content,
+    .ibot-page .feature-item.feature-right .feature-image,
+    .ibot-page .feature-item.feature-right .feature-content {
+        grid-column: auto;
+    }
+
+    .ibot-page .kit-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ibot-page .kit-components {
+        grid-template-columns: 1fr;
+    }
+
+    .ibot-page .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ibot-page .projects-scroll {
+        padding: 20px 10px;
+    }
+
+    .ibot-page .project-card {
+        min-width: 250px;
+    }
+
+    .ibot-page .testimonials-scroll {
+        padding: 15px;
+    }
+
+    .ibot-page .testimonial-card {
+        min-width: 280px;
+    }
+
+    .ibot-page .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .ibot-page .form-section {
+        padding: 50px 15px;
+    }
+
+    .ibot-page .inquiry-form {
+        padding: 25px;
+    }
+
+    .ibot-page .features-section h2,
+    .ibot-page .kit-section h2,
+    .ibot-page .technology-section h2,
+    .ibot-page .projects-section h2,
+    .ibot-page .testimonials-section h2 {
+        font-size: 2rem;
+    }
+
+    .ibot-page .hero-bottom-fade {
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ibot-page .brand-name {
+        font-size: 2rem;
+    }
+
+    .ibot-page .hero-desc {
+        font-size: 1rem;
+    }
+
+    .ibot-page .feature-content h3,
+    .ibot-page .kit-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .ibot-page .intro-section h2,
+    .ibot-page .features-section h2,
+    .ibot-page .kit-section h2,
+    .ibot-page .technology-section h2,
+    .ibot-page .projects-section h2,
+    .ibot-page .testimonials-section h2 {
+        font-size: 1.7rem;
+    }
+}

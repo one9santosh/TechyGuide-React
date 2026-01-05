@@ -1,0 +1,795 @@
+/* ============ 1. VARIABLES & CORE RESET ============ */
+:root {
+    --primary-orange: #f5a623;
+    --primary-blue: #003366;
+    --accent-teal: #00cec9;
+    --accent-purple: #6c5ce7;
+    
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    
+    /* Subtle Section Backgrounds */
+    --bg-white: #ffffff;
+    --bg-soft-gray: #f8fafc;
+    --bg-soft-blue: #f0f4f8;
+    --bg-soft-teal: #e6fffa;
+    --bg-soft-orange: #fffaf0;
+    
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.franchise-page * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.franchise-page {
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+    overflow-x: hidden;
+}
+
+/* ============ 2. SECTION & TYPOGRAPHY ============ */
+.franchise-page .container { max-width: 1300px; margin: 0 auto; padding: 0 25px; }
+.franchise-page .section { padding: 80px 0; }
+
+.franchise-page .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-blue);
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.franchise-page .section-title::after {
+    content: ''; display: block; width: 60px; height: 4px;
+    background: var(--primary-orange); margin: 15px auto 0; border-radius: 10px;
+}
+
+.franchise-page .lead { text-align: center; max-width: 800px; margin: -2rem auto 3rem; color: var(--text-muted); font-size: 1.1rem; }
+
+/* ============ 3. SECTION BACKGROUNDS ============ */
+.franchise-page #why { background-color: var(--bg-soft-blue); }
+.franchise-page #requirements { background-color: var(--bg-soft-orange); }
+.franchise-page #snapshots { background-color: var(--bg-soft-gray); }
+.franchise-page #stories { background-color: var(--bg-white); }
+.franchise-page .containerbox { background-color: #cbd2d9 !important; }
+
+/* ============ 4. HERO SECTION ============ */
+.franchise-page .hero {
+    position: relative;
+    min-height: 100vh;
+    background: url('src/assets/franchisepageimages/creates.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    z-index: 0;
+}
+
+.franchise-page .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.85) 0%, rgba(0, 15, 30, 0.95) 100%);
+    z-index: 1;
+}
+
+.franchise-page .hero-content { position: relative; z-index: 3; color: white; }
+.franchise-page .tagline { color: #ffd700; letter-spacing: 4px; font-weight: 700; margin-bottom: 1rem; display: block; font-size: 0.9rem; }
+.franchise-page .kit-title { font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 1.2; margin-bottom: 1.5rem; }
+.franchise-page .accent { color: var(--primary-orange); }
+
+.franchise-page .btn {
+    padding: 16px 40px; border-radius: 50px; font-weight: 600;
+    display: inline-block; transition: var(--transition); text-decoration: none;
+}
+.franchise-page .btn-orange { background: var(--primary-orange); color: white; border: 2px solid var(--primary-orange); }
+.franchise-page .btn-orange:hover { background: transparent; color: white; transform: translateY(-5px); }
+.franchise-page .btn-glass { background: rgba(255, 255, 255, 0.107); border: 1px solid rgba(255, 255, 255, 0.345); color: white; backdrop-filter: blur(4px); margin-left: 20px; }
+.franchise-page .hero-buttons { margin-top: 2rem; }
+
+/* ============ 5. PILLAR CARDS (Perfect Fit) ============ */
+.franchise-page .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+.franchise-page .pillar-card {
+    background: white; padding: 20px; border-radius: 20px;
+    box-shadow: var(--shadow); transition: var(--transition);
+    border-bottom: 4px solid var(--primary-orange);
+}
+
+.franchise-page .pillar-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
+
+.franchise-page .pillar-img {
+    height: 220px; border-radius: 15px; margin-bottom: 20px;
+    background-size: cover; background-position: center;
+}
+
+.franchise-page .feature-list li { font-size: 0.9rem; margin-bottom: 8px; padding-left: 20px; position: relative; color: var(--text-muted); }
+.franchise-page .feature-list li::before { content: '→'; position: absolute; left: 0; color: var(--primary-orange); }
+
+/* ============ 6. THE EXPANDING BOXES (What Will You Get) ============ */
+.franchise-page .containerbox {
+    background-color: #cbd2d9 !important;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.franchise-page .main-header {
+    margin-bottom: 60px;
+    background-color: transparent;
+}
+
+.franchise-page .main-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.franchise-page .main-header h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-orange);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+.franchise-page .box {
+    height: 380px; width: 550px; 
+    margin: 0 auto 30px;
+    display: flex; overflow: hidden;
+    background: white; border-radius: 24px;
+    transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.franchise-page .box:hover { width: 950px; }
+.franchise-page .box:nth-child(even) { flex-direction: row-reverse; }
+
+.franchise-page .box-content { flex: 0 0 550px; height: 100%; position: relative; }
+.franchise-page .box-content img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.franchise-page .box:hover img { filter: brightness(70%) scale(1.05); }
+
+.franchise-page .text-overlay {
+    position: absolute; bottom: 30px; left: -10px;
+    background: var(--primary-orange); color: white;
+    padding: 15px 30px; font-weight: 700; border-radius: 0 50px 50px 0;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2); z-index: 5;
+}
+
+.franchise-page .box:nth-child(even) .text-overlay { left: auto; right: -10px; border-radius: 50px 0 0 50px; }
+
+.franchise-page .details {
+    flex: 1; padding: 40px; display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.5s 0.2s; text-align: center; font-size: 1.2rem;
+}
+.franchise-page .box:hover .details { opacity: 1; }
+
+/* ============ 7. SNAPSHOTS GRID ============ */
+.franchise-page .snapshot-images {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 20px;
+}
+.franchise-page .snapshot-images img {
+    width: 100%; height: 150px; object-fit: cover; border-radius: 8px;
+    transition: var(--transition); cursor: pointer;
+}
+.franchise-page .snapshot-images img:hover { transform: scale(1.05); z-index: 2; }
+
+/* ============ 8. STATS BAR ============ */
+.franchise-page .stats-bar {
+    background: linear-gradient(-45deg, #003366, #001a3d, #003366, #001122);
+    background-size: 400% 400%;
+    animation: gradientShift 30s ease infinite !important;
+    color: white; padding: 40px 0;
+    display: flex; justify-content: space-around; text-align: center;
+}
+.franchise-page .stat-item h2 { font-size: 3rem; color: var(--primary-orange); margin-bottom: 5px; }
+.franchise-page .stat-item p { text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; opacity: 0.8; }
+
+/* ============ 9. MOBILE RESPONSIVE (Perfect Scaling) ============ */
+@media (max-width: 1100px) {
+    .franchise-page .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    .franchise-page .box:hover { width: 550px; }
+}
+
+@media (max-width: 768px) {
+    .franchise-page .section { padding: 60px 0; }
+    .franchise-page .pillars-grid, .franchise-page .snapshot-images { grid-template-columns: 1fr; }
+    
+    .franchise-page .box { 
+        width: 100% !important; height: auto !important; 
+        flex-direction: column !important; 
+    }
+    .franchise-page .box-content { flex: none; width: 100%; height: 280px; }
+    .franchise-page .details { opacity: 1; padding: 30px 20px; }
+    .franchise-page .text-overlay { width: 90%; left: 5% !important; bottom: 15px; }
+
+    .franchise-page .stats-bar { flex-direction: column; gap: 40px; }
+    .franchise-page .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
+    .franchise-page .btn-glass {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+}
+
+/* ============ RECTANGULAR STORY SCROLLER ============ */
+.franchise-page #stories {
+    background-color: var(--bg-white);
+    padding: 60px 0;
+}
+
+.franchise-page .story-viewport {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+    background: #ffffff;
+    padding: 30px 0;
+    position: relative;
+}
+
+.franchise-page .story-track {
+    display: flex;
+    width: max-content;
+    animation: scrollStories 30s linear infinite;
+    gap: 50px;
+}
+
+.franchise-page .story-track:hover {
+    animation-play-state: paused;
+}
+
+.franchise-page .story-item {
+    width: 450px;
+    flex-shrink: 0;
+}
+
+.franchise-page .story-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.franchise-page .story-item img:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-orange);
+}
+
+/* The Animation Logic */
+@keyframes scrollStories {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .franchise-page .story-item { width: 280px; }
+    .franchise-page .story-item img { height: 160px; }
+}
+
+/* ============ REQUIREMENTS SECTION 4x1 GRID last section  ============ */
+.franchise-page .requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.franchise-page .requirement-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--primary-orange);
+    transition: all 0.3s ease;
+}
+
+.franchise-page .requirement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.franchise-page .requirement-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.franchise-page .requirement-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.franchise-page .requirement-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.franchise-page .requirement-card li {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ============ INFO GRID 2x1 LAYOUT ============ */
+.franchise-page .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.franchise-page .info-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--accent-teal);
+}
+
+.franchise-page .info-box.blue-border {
+    border-left-color: var(--primary-blue);
+}
+
+.franchise-page .info-box h3 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.franchise-page .info-box ul {
+    list-style: none;
+}
+
+.franchise-page .info-box li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.franchise-page .info-box li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+    font-size: 0.8rem;
+}
+
+/* ============ DYNAMIC SNAPSHOT SECTION ============ */
+.franchise-page .snapshot-section {
+    padding: 100px 0;
+    background-color: #f0f4f8; 
+    perspective: 1000px;
+}
+
+.franchise-page .containersnapshot {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.franchise-page .view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    grid-auto-rows: 380px;
+}
+
+/* ============ THE ANIMATION LOGIC ============ */
+@keyframes appear {
+    from { 
+        opacity: 0; 
+        transform: scale(0.5); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+}
+
+.franchise-page .block {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    background: #fff;
+    animation: appear linear;
+    
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.franchise-page .block.big {
+    grid-column: span 2; 
+}
+
+.franchise-page .block.small {
+    grid-column: span 1;
+}
+
+.franchise-page .block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    display: block;
+}
+
+.franchise-page .block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.franchise-page .block:hover img {
+    transform: scale(1.1);
+}
+
+.franchise-page .block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+}
+.franchise-page .block:hover::before { opacity: 1; }
+
+/* ============ RESPONSIVE SETTINGS ============ */
+@media (max-width: 1100px) {
+    .franchise-page .view {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 320px;
+        gap: 20px;
+    }
+    .franchise-page .block.big { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+    .franchise-page .view {
+        grid-template-columns: 1fr; 
+        grid-auto-rows: 280px;
+    }
+    .franchise-page .block.big, .franchise-page .block.small {
+        grid-column: span 1;
+    }
+    .franchise-page .block {
+        animation-range: entry 0% cover 30%;
+    }
+}
+
+/* ============ REVENUE STREAMS STYLING ============ */
+.franchise-page .revenue-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    overflow: hidden;
+}
+
+.franchise-page .revenue-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+@keyframes revenueReveal {
+    from { 
+        opacity: 0; 
+        transform: scale(0.8) translateY(50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+    }
+}
+
+.franchise-page .revenue-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    animation: revenueReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 35%;
+}
+
+.franchise-page .revenue-card:hover {
+    transform: translateY(-15px);
+    background: #ffffff;
+    box-shadow: 0 30px 60px rgba(0, 51, 102, 0.12);
+}
+
+.franchise-page .rev-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.franchise-page .revenue-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.franchise-page .revenue-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.franchise-page .rev-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #e0f2fe;
+    color: #0369a1;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.franchise-page .revenue-highlight {
+    margin-top: 60px;
+    background: var(--primary-blue);
+    color: white;
+    padding: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    animation: revenueReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 30%;
+}
+
+.franchise-page .highlight-text h3 { color: var(--primary-orange); font-size: 1.8rem; }
+.franchise-page .highlight-text p { font-size: 2.2rem; font-weight: 800; }
+
+.franchise-page .pulse-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.7); }
+    70% { box-shadow: 0 0 0 30px rgba(245, 166, 35, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
+}
+
+@media (max-width: 768px) {
+    .franchise-page .revenue-highlight {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+.franchise-page ul {
+    list-style: none;
+}
+
+/* ============ MOBILE RESPONSIVE - COMPLETE ============ */
+
+@media (max-width: 768px) {
+    .franchise-page .hero {
+        min-height: 80vh;
+        padding: 20px 0;
+    }
+    
+    .franchise-page .kit-title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+        white-space: normal;
+        border: none;
+        animation: none;
+    }
+    
+    .franchise-page .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .franchise-page .btn {
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px;
+    }
+    
+    .franchise-page .btn-glass {
+        margin-left: 0 !important;
+    }
+    
+    .franchise-page .pillars-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .franchise-page .pillar-card {
+        padding: 15px;
+    }
+    
+    .franchise-page .pillar-img {
+        height: 180px;
+    }
+    
+    .franchise-page .box {
+        width: 100% !important;
+        height: auto !important;
+        flex-direction: column !important;
+        margin-bottom: 20px;
+    }
+    
+    .franchise-page .box:nth-child(even) {
+        flex-direction: column !important;
+    }
+    
+    .franchise-page .box-content {
+        flex: none;
+        width: 100%;
+        height: 200px;
+    }
+    
+    .franchise-page .details {
+        opacity: 1 !important;
+        padding: 20px 15px;
+        font-size: 1rem;
+    }
+    
+    .franchise-page .text-overlay {
+        width: 90%;
+        left: 5% !important;
+        right: auto !important;
+        bottom: 10px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-radius: 25px !important;
+    }
+    
+    .franchise-page .story-viewport {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 20px 10px;
+    }
+    
+    .franchise-page .story-item {
+        width: 280px;
+    }
+    
+    .franchise-page .story-item img {
+        height: 200px;
+    }
+    
+    .franchise-page .story-track {
+        gap: 20px;
+    }
+    
+    .franchise-page .requirements-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .franchise-page .requirement-card {
+        padding: 25px 20px;
+    }
+    
+    .franchise-page .requirement-card .icon {
+        font-size: 2.5rem;
+    }
+    
+    .franchise-page .stats-bar {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 20px;
+    }
+    
+    .franchise-page .stat-item h2 {
+        font-size: 2.5rem;
+    }
+    
+    .franchise-page .info-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    
+    .franchise-page .info-box {
+        padding: 25px 20px;
+    }
+    
+    .franchise-page .snapshot-images {
+        grid-template-columns: repeat(2, 1fr) !important;
+        padding: 0 10px;
+        gap: 8px;
+    }
+    
+    .franchise-page .snapshot-images img {
+        height: 120px;
+    }
+    
+    .franchise-page .section {
+        padding: 50px 0;
+    }
+    
+    .franchise-page .container {
+        padding: 0 15px;
+    }
+    
+    .franchise-page .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .franchise-page .lead {
+        font-size: 1rem;
+        margin: -1rem auto 2rem;
+        padding: 0 10px;
+    }
+    
+    .franchise-page .pillar-card,
+    .franchise-page .requirement-card,
+    .franchise-page .info-box {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .franchise-page .hero-content {
+        animation: none !important;
+    }
+    
+    .franchise-page .btn-orange {
+        animation: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .franchise-page .kit-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .franchise-page .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .franchise-page .story-item {
+        width: 250px;
+    }
+    
+    .franchise-page .story-item img {
+        height: 180px;
+    }
+    
+    .franchise-page .pillar-img {
+        height: 150px;
+    }
+    
+    .franchise-page .box-content {
+        height: 180px;
+    }
+    
+    .franchise-page .snapshot-images img {
+        height: 100px;
+    }
+}

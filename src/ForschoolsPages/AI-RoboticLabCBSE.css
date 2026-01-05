@@ -1,0 +1,1121 @@
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
+.ai-roboticslab-cbse-root {
+	--primary: #2563eb;
+	--primary-dark: #1e40af;
+	--accent: #f59e0b;
+	--dark: #0f172a;
+	--light: #f1f5f9;
+	--text: #334155;
+	--gradient: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+	--font-heading: 'Space Grotesk', sans-serif;
+	--font-body: 'Outfit', sans-serif;
+}
+
+.ai-roboticslab-cbse-root * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.ai-roboticslab-cbse-root {
+	font-family: var(--font-body);
+	color: var(--text);
+	background-color: #fff;
+	overflow-x: hidden;
+	line-height: 1.6;
+}
+
+.ai-roboticslab-cbse-root h1,
+.ai-roboticslab-cbse-root h2,
+.ai-roboticslab-cbse-root h3,
+.ai-roboticslab-cbse-root h4,
+.ai-roboticslab-cbse-root h5 {
+	font-family: var(--font-heading);
+	color: var(--dark);
+	line-height: 1.2;
+}
+
+.ai-roboticslab-cbse-root a { text-decoration: none; }
+.ai-roboticslab-cbse-root ul { list-style: none; }
+
+/* =========================================
+   2. UTILITY CLASSES
+   ========================================= */
+.ai-roboticslab-cbse-root .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.ai-roboticslab-cbse-root .small-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.ai-roboticslab-cbse-root .section-heading {
+	font-size: 2.5rem;
+	margin-bottom: 15px;
+	font-weight: 700;
+}
+
+.ai-roboticslab-cbse-root .section-subtext {
+	max-width: 600px;
+	margin: 0 auto 50px;
+	color: #64748b;
+	font-size: 1.1rem;
+}
+
+.ai-roboticslab-cbse-root .text-center { text-align: center; }
+.ai-roboticslab-cbse-root .text-white { color: #fff !important; }
+
+/* --- Buttons --- */
+.ai-roboticslab-cbse-root .btn {
+	padding: 12px 28px;
+	border-radius: 8px;
+	font-weight: 600;
+	transition: 0.3s;
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+}
+
+.ai-roboticslab-cbse-root .btn-primary {
+	background: var(--gradient);
+	color: #fff;
+	box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.ai-roboticslab-cbse-root .btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.ai-roboticslab-cbse-root .btn-glass {
+	background: rgba(255,255,255,0.15);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+	margin-left: 15px;
+}
+
+.ai-roboticslab-cbse-root .btn-glass:hover {
+	background: rgba(255,255,255,0.25);
+}
+
+.ai-roboticslab-cbse-root .btn-outline-dark {
+	border: 2px solid var(--dark);
+	color: var(--dark);
+	background: transparent;
+}
+
+.ai-roboticslab-cbse-root .btn-outline-dark:hover {
+	background: var(--dark);
+	color: #fff;
+}
+
+.ai-roboticslab-cbse-root .btn-full {
+	width: 100%;
+	background: var(--dark);
+	color: #fff;
+	padding: 15px;
+	font-size: 1rem;
+}
+
+.ai-roboticslab-cbse-root .btn-full:hover {
+	background: var(--primary);
+}
+
+.ai-roboticslab-cbse-root .btn-light {
+	background: #fff;
+	color: var(--primary);
+}
+
+.ai-roboticslab-cbse-root .btn-light:hover {
+	background: var(--dark);
+	color: #fff;
+}
+
+.ai-roboticslab-cbse-root .btn-text {
+	color: var(--dark);
+	font-weight: 600;
+	font-size: 0.95rem;
+	transition: 0.3s;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.ai-roboticslab-cbse-root .btn-text:hover {
+	color: var(--accent);
+	gap: 10px;
+}
+
+.ai-roboticslab-cbse-root .btn-orange {
+	background: var(--accent);
+	color: #fff; 
+	box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.ai-roboticslab-cbse-root .btn-orange:hover {
+	background: #d97706;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(245, 158, 11, 0.6);
+	color: #fff;
+}
+
+.ai-roboticslab-cbse-root .floating-cta {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	background: var(--accent);
+	color: var(--dark);
+	padding: 15px 25px;
+	border-radius: 50px;
+	box-shadow: 0 5px 20px rgba(245, 158, 11, 0.4);
+	z-index: 1000;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.ai-roboticslab-cbse-root .floating-cta:hover {
+	transform: scale(1.05);
+}
+
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .hero-section {
+	position: relative;
+	min-height: 90vh;
+	background: #0a5ab1;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.ai-roboticslab-cbse-root .hero-section::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	background: linear-gradient(to top, #ffffff 0%, transparent 100%);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.ai-roboticslab-cbse-root .hero-bg-animation {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(circle at 70% 20%, rgba(37, 99, 235, 0.15), transparent 50%);
+	z-index: 0;
+}
+
+.ai-roboticslab-cbse-root .hero-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+	padding: 60px 20px;
+}
+
+.ai-roboticslab-cbse-root .hero-text { flex: 1; max-width: 600px; }
+
+.ai-roboticslab-cbse-root .brand-tag {
+	background: rgba(255,255,255,0.1);
+	padding: 8px 16px;
+	border-radius: 30px;
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 30px;
+	font-size: 0.9rem;
+	border: 1px solid rgba(255,255,255,0.1);
+}
+
+.ai-roboticslab-cbse-root .hero-logo { height: 24px; }
+
+.ai-roboticslab-cbse-root .hero-text h1 {
+	font-size: 3.5rem;
+	margin-bottom: 25px;
+	color: #fff;
+	line-height: 1.1;
+}
+
+.ai-roboticslab-cbse-root .highlight-text { color: var(--accent); }
+
+.ai-roboticslab-cbse-root .hero-text p {
+	font-size: 1.2rem;
+	margin-bottom: 40px;
+	color: #cbd5e1;
+	font-weight: 300;
+}
+
+.ai-roboticslab-cbse-root .hero-visual {
+	flex: 1;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.ai-roboticslab-cbse-root .main-hero-img {
+	width: 100%;
+	max-width: 550px;
+	border-radius: 20px;
+	box-shadow: -20px 20px 0 rgba(255,255,255,0.05);
+	z-index: 1;
+}
+
+.ai-roboticslab-cbse-root .floating-badge {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	background: #fff;
+	color: var(--dark);
+	padding: 15px 20px;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	z-index: 2;
+	animation: float 4s infinite ease-in-out;
+}
+
+.ai-roboticslab-cbse-root .floating-badge i { font-size: 2rem; color: var(--accent); }
+
+@keyframes float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+}
+
+/* =========================================
+   4. GOVERNMENT GUIDELINES SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .guidelines-section {
+	padding: 100px 0;
+	background: #fff;
+	border-bottom: 1px solid #f1f5f9;
+}
+
+.ai-roboticslab-cbse-root .guidelines-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	gap: 40px;
+	margin-top: 50px;
+}
+
+.ai-roboticslab-cbse-root .guide-card {
+	display: flex;
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: 0.3s;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.ai-roboticslab-cbse-root .guide-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+	border-color: var(--primary);
+}
+
+.ai-roboticslab-cbse-root .guide-img {
+	width: 40%;
+	position: relative;
+}
+
+.ai-roboticslab-cbse-root .guide-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.ai-roboticslab-cbse-root .guide-badge {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	background: var(--accent);
+	color: var(--dark);
+	padding: 5px 12px;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.ai-roboticslab-cbse-root .guide-content {
+	width: 60%;
+	padding: 30px;
+}
+
+.ai-roboticslab-cbse-root .guide-content h3 {
+	font-size: 1.4rem;
+	margin-bottom: 15px;
+	color: var(--dark);
+}
+
+.ai-roboticslab-cbse-root .guide-content p {
+	font-size: 0.95rem;
+	color: #64748b;
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+
+.ai-roboticslab-cbse-root .guide-points { padding: 0; }
+
+.ai-roboticslab-cbse-root .guide-points li {
+	font-size: 0.9rem;
+	color: var(--text);
+	margin-bottom: 8px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 500;
+}
+
+.ai-roboticslab-cbse-root .guide-points li i { color: var(--primary); }
+
+/* =========================================
+   5. STATS SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .stats-section {
+	background: #fff;
+	padding: 60px 0;
+	margin-top: -50px;
+	position: relative;
+	z-index: 5;
+}
+
+.ai-roboticslab-cbse-root .stats-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background: #fff;
+	border-radius: 20px;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+	padding: 40px;
+	text-align: center;
+}
+
+.ai-roboticslab-cbse-root .stat-item h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 5px; }
+.ai-roboticslab-cbse-root .stat-item span { font-size: 2.5rem; color: var(--primary); font-weight: bold; }
+.ai-roboticslab-cbse-root .stat-item p { font-weight: 600; color: #888; }
+
+/* =========================================
+   6. CURRICULUM TABS
+   ========================================= */
+.ai-roboticslab-cbse-root .curriculum-section {
+	padding: 80px 0;
+	background: var(--light);
+}
+
+.ai-roboticslab-cbse-root .tabs-wrapper {
+	background: #fff;
+	border-radius: 20px;
+	padding: 30px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.ai-roboticslab-cbse-root .tabs-header {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+}
+
+.ai-roboticslab-cbse-root .tab-btn {
+	padding: 12px 30px;
+	border: none;
+	background: #f1f5f9;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: 0.3s;
+	color: var(--text);
+}
+
+.ai-roboticslab-cbse-root .tab-btn.active {
+	background: var(--primary);
+	color: #fff;
+}
+
+.ai-roboticslab-cbse-root .tab-pane {
+	display: none;
+	animation: fadeIn 0.5s;
+}
+
+.ai-roboticslab-cbse-root .tab-pane.active { display: block; }
+
+.ai-roboticslab-cbse-root .curr-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+}
+
+.ai-roboticslab-cbse-root .curr-card {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	padding: 25px;
+	border-radius: 15px;
+}
+
+.ai-roboticslab-cbse-root .curr-card h4 {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--primary);
+	margin-bottom: 15px;
+	font-size: 1.2rem;
+}
+
+.ai-roboticslab-cbse-root .curr-card ul { padding-left: 20px; color: var(--text); }
+.ai-roboticslab-cbse-root .curr-card li { margin-bottom: 8px; }
+
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   7. INFRASTRUCTURE SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .infra-section {
+	padding: 100px 0;
+	background: var(--dark);
+	color: #fff;
+}
+
+.ai-roboticslab-cbse-root .infra-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+}
+
+.ai-roboticslab-cbse-root .infra-box {
+	background: rgba(255,255,255,0.05);
+	padding: 30px;
+	border-radius: 15px;
+	text-align: center;
+	transition: 0.3s;
+}
+
+.ai-roboticslab-cbse-root .infra-box:hover {
+	background: rgba(255,255,255,0.1);
+	transform: translateY(-5px);
+}
+
+.ai-roboticslab-cbse-root .infra-box i {
+	font-size: 2.5rem;
+	color: var(--accent);
+	margin-bottom: 20px;
+}
+
+.ai-roboticslab-cbse-root .infra-box h3 { margin-bottom: 15px; color: #fff; }
+.ai-roboticslab-cbse-root .infra-box p { color: #cbd5e1; margin-bottom: 8px; font-size: 0.95rem; }
+
+/* =========================================
+   8. PACKAGES SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .packages-section {
+	padding: 100px 0;
+	background: #fff;
+}
+
+.ai-roboticslab-cbse-root .pricing-wrapper {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.ai-roboticslab-cbse-root .pricing-card {
+	background: #fff;
+	border: 1px solid #e2e8f0;
+	padding: 40px;
+	border-radius: 16px;
+	width: 350px;
+	text-align: center;
+	position: relative;
+	transition: 0.3s;
+}
+
+.ai-roboticslab-cbse-root .pricing-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.ai-roboticslab-cbse-root .pricing-card.popular {
+	border: 2px solid var(--primary);
+	transform: scale(1.05);
+	z-index: 2;
+}
+
+.ai-roboticslab-cbse-root .badge {
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--primary);
+	color: #fff;
+	padding: 4px 12px;
+	border-radius: 20px;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.ai-roboticslab-cbse-root .price-tag {
+	color: var(--primary);
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 15px 0 5px;
+}
+
+.ai-roboticslab-cbse-root .price-tag small {
+	font-size: 0.9rem;
+	font-weight: 400;
+	color: #64748b;
+}
+
+.ai-roboticslab-cbse-root .capacity {
+	color: var(--accent);
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.ai-roboticslab-cbse-root .pricing-card ul {
+	list-style: none;
+	margin-bottom: 30px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.ai-roboticslab-cbse-root .pricing-card ul li {
+	margin-bottom: 12px;
+	color: #475569;
+	font-size: 0.95rem;
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.ai-roboticslab-cbse-root .pricing-card ul li i { color: var(--primary); margin-top: 4px; }
+
+/* =========================================
+   9. INDIVIDUAL MODULES SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .modules-section {
+	padding: 80px 0;
+	background: #fff;
+	border-top: 1px solid #f1f5f9;
+}
+
+.ai-roboticslab-cbse-root .modules-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 30px;
+	margin-top: 40px;
+}
+
+.ai-roboticslab-cbse-root .module-card {
+	background: #fff;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+	border: 1px solid #e2e8f0;
+	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+}
+
+.ai-roboticslab-cbse-root .module-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+	border-color: var(--primary);
+}
+
+.ai-roboticslab-cbse-root .module-img {
+	height: 200px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.ai-roboticslab-cbse-root .module-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.5s;
+}
+
+.ai-roboticslab-cbse-root .module-card:hover .module-img img { transform: scale(1.1); }
+
+.ai-roboticslab-cbse-root .category-tag {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: rgba(255,255,255,0.9);
+	color: var(--primary);
+	padding: 5px 12px;
+	border-radius: 10px;
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+.ai-roboticslab-cbse-root .module-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+
+.ai-roboticslab-cbse-root .module-content h3 { margin-bottom: 10px; color: var(--dark); }
+
+.ai-roboticslab-cbse-root .module-specs { margin-bottom: 15px; color: #475569; }
+
+.ai-roboticslab-cbse-root .module-specs li { margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+
+.ai-roboticslab-cbse-root .module-specs li i { color: var(--primary); }
+
+.ai-roboticslab-cbse-root .module-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #e2e8f0; }
+
+.ai-roboticslab-cbse-root .module-footer .price { color: var(--primary); font-weight: 700; }
+
+.ai-roboticslab-cbse-root .special-card { background: linear-gradient(135deg, #2563eb, #1e40af); color: #fff; }
+
+.ai-roboticslab-cbse-root .special-card .module-header { padding: 30px 25px 10px; }
+.ai-roboticslab-cbse-root .special-card h3 { color: #fff; font-size: 1.5rem; margin-bottom: 5px; }
+.ai-roboticslab-cbse-root .special-card p { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
+
+.ai-roboticslab-cbse-root .kit-list-wrapper { padding: 0 25px; flex: 1; }
+.ai-roboticslab-cbse-root .kit-list { list-style: none; }
+.ai-roboticslab-cbse-root .kit-list li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 10px; color: #fff; }
+.ai-roboticslab-cbse-root .kit-list li:last-child { border-bottom: none; }
+.ai-roboticslab-cbse-root .special-card .module-footer { border-top: none; padding: 25px; }
+
+/* =========================================
+   10. SUPPORT SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .support-section {
+	padding: 80px 0;
+	background: #f8fafc;
+}
+
+.ai-roboticslab-cbse-root .support-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 30px;
+	margin-top: 40px;
+}
+
+.ai-roboticslab-cbse-root .support-card {
+	background: #fff;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+	border: 1px solid #e2e8f0;
+	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+}
+
+.ai-roboticslab-cbse-root .support-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+	border-color: var(--primary);
+}
+
+.ai-roboticslab-cbse-root .card-image { position: relative; overflow: hidden; height: 180px; width: 100%; }
+.ai-roboticslab-cbse-root .card-image img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.ai-roboticslab-cbse-root .support-card:hover .card-image img { transform: scale(1.05); }
+
+
+.ai-roboticslab-cbse-root .card-content {
+	padding: 25px;
+	position: relative;
+	text-align: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.ai-roboticslab-cbse-root .card-icon {
+	width: 60px;
+	height: 60px;
+	background: #fff;
+	color: var(--primary);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	margin: -55px auto 15px;
+	position: relative;
+	z-index: 2;
+	border: 3px solid #fff;
+}
+
+.ai-roboticslab-cbse-root .card-content h4 {
+	font-size: 1.25rem;
+	margin-bottom: 12px;
+	color: var(--dark);
+	font-weight: 700;
+}
+.ai-roboticslab-cbse-root .card-content p {
+	color: #64748b;
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+/* =========================================
+   11. DIY / HARDWARE SLIDER
+   ========================================= */
+.ai-roboticslab-cbse-root .diy-section {
+	padding: 80px 0;
+	background: #fff;
+	color: inherit;
+	position: relative;
+	overflow: hidden;
+}
+
+.ai-roboticslab-cbse-root .diy-section::before {
+	content: none;
+}
+
+.ai-roboticslab-cbse-root .diy-container {
+	position: relative;
+	display: flex;
+	gap: 0;
+	align-items: stretch;
+	border-radius: 25px;
+	overflow: hidden;
+	box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+	background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+	z-index: 2;
+}
+
+.ai-roboticslab-cbse-root .diy-content {
+	flex: 1 1 55%;
+	min-width: 0;
+	padding: 60px;
+	color: #fff;
+}
+
+.ai-roboticslab-cbse-root .diy-content h2 { color: #fff; font-size: 2.5rem; margin-bottom: 20px; }
+.ai-roboticslab-cbse-root .diy-content p {
+	color: #cbd5e1;
+	font-size: 1.1rem;
+	margin-bottom: 30px;
+	max-width: 500px;
+}
+
+.ai-roboticslab-cbse-root .badge-diy {
+	background: var(--accent);
+	color: var(--dark);
+	padding: 5px 15px;
+	border-radius: 30px;
+	font-size: 0.8rem;
+	font-weight: 700;
+	display: inline-block;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.ai-roboticslab-cbse-root .diy-features {
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	margin-bottom: 40px;
+}
+
+.ai-roboticslab-cbse-root .diy-features li {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 0.95rem;
+	color: #fff;
+}
+
+.ai-roboticslab-cbse-root .diy-features i { color: var(--accent); font-size: 1.2rem; }
+
+
+.ai-roboticslab-cbse-root .slider-wrapper,
+.ai-roboticslab-cbse-root .diy-image {
+	flex: 1 1 45%;
+	position: relative;
+	min-height: 460px;
+	height: auto;
+	border-radius: 0;
+	overflow: hidden;
+	box-shadow: none;
+	background: #0b1a3a;
+}
+
+.ai-roboticslab-cbse-root .diy-slide { height: 100%; display: none; }
+.ai-roboticslab-cbse-root .diy-slide:first-child { display: block; }
+.ai-roboticslab-cbse-root .diy-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.ai-roboticslab-cbse-root .slide-caption {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	padding: 12px 16px;
+	border-radius: 12px;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+	font-weight: 700;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.ai-roboticslab-cbse-root .floating-kit-tag {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: #1d75ff;
+	color: #fff;
+	padding: 10px 18px;
+	border-radius: 999px;
+	font-weight: 700;
+	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.ai-roboticslab-cbse-root .btn-mt { margin-top: 10px; }
+
+/* =========================================
+   12. VIDEO SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .video-section {
+	/* Dark blue overlay with background image (from source design) */
+	background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 64, 175, 0.8)),
+		url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: #fff;
+	padding: 100px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.ai-roboticslab-cbse-root .video-section::before {
+	content: '';
+	position: absolute;
+	top: -100px;
+	right: -50px;
+	width: 400px;
+	height: 400px;
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+	border-radius: 50%;
+	z-index: 0;
+	pointer-events: none;
+}
+
+.ai-roboticslab-cbse-root .video-content-wrapper { position: relative; z-index: 2; }
+
+.ai-roboticslab-cbse-root .video-container {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	margin: 50px auto 0;
+	height: 0;
+	padding-bottom: 56.25%;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: #000;
+}
+
+.ai-roboticslab-cbse-root .video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.ai-roboticslab-cbse-root .video-container:hover {
+	border-color: var(--accent);
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+	transform: translateY(-5px);
+	transition: all 0.4s ease;
+}
+
+/* =========================================
+   13. TIMELINE SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .timeline-section { padding: 80px 0; background: var(--light); }
+.ai-roboticslab-cbse-root .timeline-box { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 40px; max-width: 900px; margin-left: auto; margin-right: auto; }
+.ai-roboticslab-cbse-root .t-item { text-align: center; position: relative; width: 100px; }
+.ai-roboticslab-cbse-root .t-item span { display: block; background: var(--dark); color: #fff; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 10px; font-weight: bold; }
+.ai-roboticslab-cbse-root .t-item p { font-size: 0.9rem; font-weight: 600; }
+.ai-roboticslab-cbse-root .t-line { flex: 1; height: 2px; background: #cbd5e1; margin: 0 10px 25px; }
+
+/* =========================================
+   14. GALLERY SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .gallery-section { padding: 80px 0; background: #fff; }
+.ai-roboticslab-cbse-root .gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 250px);
+	grid-auto-rows: 250px;
+	grid-auto-flow: dense;
+	gap: 15px;
+}
+.ai-roboticslab-cbse-root .gallery-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 12px;
+	min-height: 250px;
+}
+.ai-roboticslab-cbse-root .gallery-item.large {
+	grid-column: span 2;
+	grid-row: span 2;
+	min-height: 500px;
+}
+.ai-roboticslab-cbse-root .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; display: block; }
+.ai-roboticslab-cbse-root .gallery-item:hover img { transform: scale(1.1); }
+.ai-roboticslab-cbse-root .gallery-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(210,210,210,0.66); color: #fff; padding: 15px; opacity: 0; transition: 0.3s; }
+.ai-roboticslab-cbse-root .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* =========================================
+   15. TESTIMONIAL SLIDER
+   ========================================= */
+.ai-roboticslab-cbse-root .testimonial-section { padding: 80px 0; background: var(--light); overflow: hidden; }
+.ai-roboticslab-cbse-root .slider { width: 100%; overflow: hidden; }
+.ai-roboticslab-cbse-root .slide-track { display: flex; width: calc(390px * 12); animation: scroll 40s ease-in-out infinite; }
+.ai-roboticslab-cbse-root .testimonial-card { width: 350px; background: #fff; padding: 21.7px; border-radius: 12px; margin: 0 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.ai-roboticslab-cbse-root .stars { color: var(--accent); margin-bottom: 10px; }
+.ai-roboticslab-cbse-root .profile { display: flex; align-items: center; gap: 15px; margin-top: 20px; }
+.ai-roboticslab-cbse-root .profile-icon { width: 40px; height: 40px; background: var(--dark); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.ai-roboticslab-cbse-root .profile-info h4 { font-size: 0.9rem; margin: 0; }
+.ai-roboticslab-cbse-root .profile-info span { font-size: 0.8rem; color: #64748b; }
+
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-390px * 6)); } }
+
+/* =========================================
+   16. FAQ
+   ========================================= */
+.ai-roboticslab-cbse-root .faq-section { padding: 80px 0; background: #fff; }
+.ai-roboticslab-cbse-root .accordion-item { background: var(--light); margin-bottom: 10px; border-radius: 8px; overflow: hidden; }
+.ai-roboticslab-cbse-root .accordion-header { width: 100%; padding: 20px; border: none; background: none; text-align: left; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
+.ai-roboticslab-cbse-root .accordion-body { max-height: 0; overflow: hidden; transition: 0.3s; padding: 0 20px; }
+.ai-roboticslab-cbse-root .accordion-header.active + .accordion-body { padding-bottom: 20px; }
+
+/* =========================================
+   17. CONTACT SECTION
+   ========================================= */
+.ai-roboticslab-cbse-root .contact-area { background: var(--dark); color: #fff; padding: 80px 0 20px; }
+.ai-roboticslab-cbse-root .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+
+.ai-roboticslab-cbse-root .info-box { display: flex; align-items: center; gap: 20px; margin-top: 20px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; }
+.ai-roboticslab-cbse-root .info-box i { font-size: 1.5rem; color: var(--primary); }
+
+.ai-roboticslab-cbse-root .contact-form-wrapper { background: #fff; padding: 40px; border-radius: 20px; color: var(--dark); }
+
+.ai-roboticslab-cbse-root .form-group { margin-bottom: 20px; }
+
+.ai-roboticslab-cbse-root .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.ai-roboticslab-cbse-root .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
+
+.ai-roboticslab-cbse-root .form-group input,
+.ai-roboticslab-cbse-root .form-group select,
+.ai-roboticslab-cbse-root .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: 0.3s; }
+
+.ai-roboticslab-cbse-root .form-group input:focus,
+.ai-roboticslab-cbse-root .form-group textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+
+.ai-roboticslab-cbse-root .form-group textarea { resize: vertical; }
+
+@media (max-width: 600px) {
+	.ai-roboticslab-cbse-root .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+.ai-roboticslab-cbse-root .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; color: #94a3b8; }
+
+/* =========================================
+   18. ANIMATIONS
+   ========================================= */
+.ai-roboticslab-cbse-root .hidden-left { opacity: 0; transform: translateX(-30px); transition: 0.8s; }
+.ai-roboticslab-cbse-root .hidden-right { opacity: 0; transform: translateX(30px); transition: 0.8s; }
+.ai-roboticslab-cbse-root .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.ai-roboticslab-cbse-root .show { opacity: 1; transform: translate(0); }
+
+/* =========================================
+   19. DIY SLIDER STYLES
+   ========================================= */
+.ai-roboticslab-cbse-root .slider-wrapper { position: relative; }
+.ai-roboticslab-cbse-root .fade { animation-name: fade; animation-duration: 1.5s; }
+
+@keyframes fade { from { opacity: 0.4; } to { opacity: 1; } }
+
+/* =========================================
+   20. RESPONSIVE
+   ========================================= */
+@media (max-width: 900px) {
+	.ai-roboticslab-cbse-root .hero-container { flex-direction: column; gap: 40px; text-align: center; }
+	.ai-roboticslab-cbse-root .hero-text, .ai-roboticslab-cbse-root .hero-visual { width: 100%; }
+	.ai-roboticslab-cbse-root .brand-tag { margin-left: auto; margin-right: auto; }
+	.ai-roboticslab-cbse-root .hero-text h1 { font-size: 2.8rem; }
+	.ai-roboticslab-cbse-root .hero-text p { font-size: 1.05rem; }
+	.ai-roboticslab-cbse-root .hero-btns { display: flex; justify-content: center; }
+	.ai-roboticslab-cbse-root .guide-card { flex-direction: column; }
+	.ai-roboticslab-cbse-root .guide-img, .ai-roboticslab-cbse-root .guide-content { width: 100%; }
+	.ai-roboticslab-cbse-root .diy-container { grid-template-columns: 1fr; }
+	.ai-roboticslab-cbse-root .timeline-box { flex-direction: column; gap: 15px; }
+	.ai-roboticslab-cbse-root .t-line { width: 100%; height: 2px; }
+	.ai-roboticslab-cbse-root .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 200px); }
+}
+
+@media (max-width: 768px) {
+	.ai-roboticslab-cbse-root .hero-text h1 { font-size: 2.4rem; }
+	.ai-roboticslab-cbse-root .section-heading { font-size: 2rem; }
+	.ai-roboticslab-cbse-root .floating-cta { right: 15px; bottom: 15px; padding: 12px 18px; }
+	.ai-roboticslab-cbse-root .gallery-item.large { grid-column: span 1; grid-row: span 1; }
+	.ai-roboticslab-cbse-root .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+	.ai-roboticslab-cbse-root .stats-grid { grid-template-columns: repeat(2, 1fr); padding: 30px; }
+	.ai-roboticslab-cbse-root .diy-container { flex-direction: column; }
+	.ai-roboticslab-cbse-root .slider-wrapper,
+	.ai-roboticslab-cbse-root .diy-image { height: 250px; min-height: auto; }
+	.ai-roboticslab-cbse-root .diy-content { padding: 40px; }
+	.ai-roboticslab-cbse-root .diy-features { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+	.ai-roboticslab-cbse-root .tabs-header { grid-template-columns: 1fr; display: grid; }
+	.ai-roboticslab-cbse-root .tab-btn { border-bottom: 1px solid #e2e8f0; }
+	.ai-roboticslab-cbse-root .hero-section { min-height: auto; padding-top: 80px; }
+	.ai-roboticslab-cbse-root .hero-text h1 { font-size: 2.1rem; }
+	.ai-roboticslab-cbse-root .pricing-card { width: 100%; }
+}
+
+@media (max-width: 480px) {
+	.ai-roboticslab-cbse-root .container { padding: 0 15px; }
+	.ai-roboticslab-cbse-root .section-subtext { margin-bottom: 30px; }
+	.ai-roboticslab-cbse-root .stats-section { padding: 40px 0; }
+	.ai-roboticslab-cbse-root .packages-section,
+	.ai-roboticslab-cbse-root .support-section,
+	.ai-roboticslab-cbse-root .gallery-section,
+	.ai-roboticslab-cbse-root .timeline-section { padding: 70px 0; }
+	.ai-roboticslab-cbse-root .contact-area { padding: 70px 0; }
+}
+
+.ai-roboticslab-cbse-root .btn-primary:active, .ai-roboticslab-cbse-root .btn:active { transform: translateY(0); }
+.ai-roboticslab-cbse-root .guide-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.2)); }
+.ai-roboticslab-cbse-root .pricing-card.popular::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(37, 99, 235, 0.05), transparent); }
+.ai-roboticslab-cbse-root .diy-section .container { position: relative; z-index: 2; }
+.ai-roboticslab-cbse-root .slider:hover .slide-track { animation-play-state: paused; }

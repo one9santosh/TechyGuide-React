@@ -1,0 +1,20 @@
+.collaboration {
+	padding: 50px 0;
+	background: #eef2f5;
+}
+
+.partners {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.partner-box {
+	background: var(--white);
+	padding: 15px 30px;
+	border-radius: 50px;
+	font-weight: 600;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
