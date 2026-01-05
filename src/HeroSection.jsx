@@ -16,14 +16,14 @@ function HeroSection() {
 
   return (
     <>
-        <section
-      className="hero"
+       <section
+  className="hero"
   style={{
     backgroundImage: `
       linear-gradient(
         to bottom,
-        rgba(14, 70, 160, 0.95) 0%,
-        rgba(14, 125, 243, 0.75) 80%,
+        rgba(0, 51, 102, 0.95) 0%,
+        rgba(0, 51, 102, 0.75) 80%,
         rgba(255, 255, 255, 0.95) 100%
       ),
       url(${herobgImage})
@@ -32,6 +32,12 @@ function HeroSection() {
     backgroundSize: "cover",
   }}
 >
+  <img
+    src={herobgImage}
+    alt="Students learning robotics in TechyGuide STEM lab in India"
+    className="hero-bg-alt"
+  />
+
 
         <div className="container hero-content">
           <h1>
@@ -43,10 +49,10 @@ function HeroSection() {
 
           <div className="hero-buttons">
             <a href="#schools" className="btn btn-hero-primary" onClick={(e) => handleAnchorClick(e, '#schools')}>
-              Explore for Schools &rarr;
+              Explore Labs for Schools &rarr;
             </a>
             <a href="#shop" className="btn btn-hero-secondary" onClick={(e) => handleAnchorClick(e, '#shop')}>
-              Shop Now
+              Shop STEM Kits
             </a>
           </div>
         </div>

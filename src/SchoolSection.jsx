@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AILab from '/src/assets/ai-robotics-lab.jpg'
 import StemImage from '/src/assets/stem-tinkering-lab.jpg'
 import LabViewImage from '/src/assets/lab view.jpg'
@@ -22,8 +23,7 @@ function SchoolSection() {
               <span style={{color: '#f09a2d'}}>Educational Institutions</span>
             </h2>
             <p className="section-sub">
-              Comprehensive solutions to transform your school into a hub of
-              innovation and technology
+              Comprehensive solutions to transform your school into a hub of innovation and technology. Hands-On Learning for AI, Robotics & STEM.
             </p>
           </div>
 
@@ -65,14 +65,21 @@ function SchoolSection() {
                     robotics.
                   </p>
                   <ul className="school-list">
-                    <li>Robotics kits and AI programming tools</li>
-                    <li>Automation systems for practical learning</li>
-                    <li>Machine learning and computer vision modules</li>
-                    <li>Real-time project development environment</li>
+                    <li>Advanced labs equipped for AI programming, robotics, automation, and machine learning.</li>
+                    <li>Practical project development environment .</li>
+                    <li>Teacher training included. </li>
                   </ul>
+                  <div>
+                    <Link
+                      to="/ai-roboticslab-icse"
+                      style={{ textDecoration: 'underline', fontWeight: 700, color: 'var(--accent-color)' }}
+                    >
+                      Explore AI Labs
+                    </Link>
+                  </div>
                 </div>
                 <div className="tab-image">
-                  <img src={AILab} alt="AI Lab" />
+                  <img src={AILab} alt="AI and Robotics Lab for schools in India" />
                 </div>
               </div>
             </div>
@@ -86,16 +93,25 @@ function SchoolSection() {
                     through hands-on exploration of STEM concepts.
                   </p>
                   <ul className="school-list">
+                    
                     <li>Modular workstations for collaborative projects</li>
                     <li>Prototyping tools and equipment</li>
-                    <li>Real-world project-based learning</li>
-                    <li>Creative problem-solving environment</li>
+                    <li>Tinkering labs for coding, electronics, and maker activities </li>
+                    <li>Encourages creative problem-solving and innovation.</li>
                   </ul>
+                  <div>
+                    <Link
+                      to="/ai-roboticslab-cbse"
+                      style={{ textDecoration: 'underline', fontWeight: 700, color: 'var(--accent-color)' }}
+                    >
+                      Explore STEM Labs
+                    </Link>
+                  </div>
                 </div>
                 <div className="tab-image">
                   <img
                     src={StemImage}
-                    alt="Tinkering Lab"
+                    alt="Students at STEM Tinkering Lab building circuits"
                   />
                 </div>
               </div>

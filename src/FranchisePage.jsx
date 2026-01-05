@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react';
 import './FranchisePage.css';
+import studentsImg from './assets/franchisepageimages/students.jpg';
+import testimonial1 from './assets/franchisepageimages/Website Testimonial_1.png';
+import testimonial11 from './assets/franchisepageimages/Website Testimonial_11.png';
+import testimonial13 from './assets/franchisepageimages/Website Testimonial_13.png';
+import testimonial14 from './assets/franchisepageimages/Website Testimonial_14.png';
+import testimonial15 from './assets/franchisepageimages/Website Testimonial_15.png';
 
 function FranchisePage() {
     useEffect(() => {
@@ -172,7 +178,7 @@ function FranchisePage() {
 
                     <div className="pillars-grid">
                         <div className="pillar-card card">
-                            <div className="pillar-img" style={{backgroundImage: "url('src/assets/franchisepageimages/students.jpg')"}}></div>
+                            <div className="pillar-img" style={{backgroundImage: `url(${studentsImg})`}}></div>
                             <div className="pillar-icon">🌍</div>
                             <h3>ROBOTICS COURSES FOR KIDS</h3>
                             <p>Recognized as India's No. 1 Robotics & Coding Learning Centre, ensuring brand trust and localized advantages.</p><br />
@@ -371,7 +377,7 @@ function FranchisePage() {
 
                 <div className="box">
                     <div className="box-content">
-                        <img src="src/assets/franchisepageimages/students.jpg" alt="Lab Layout" />
+                        <img src={studentsImg} alt="Lab Layout" />
                         <div className="text-overlay">LAB LAYOUT & SET UP DESIGN</div>
                     </div>
                     <div className="details">
@@ -381,7 +387,7 @@ function FranchisePage() {
 
                 <div className="box">
                     <div className="box-content">
-                        <img src="src/assets/franchisepageimages/students.jpg" alt="Hardware" />
+                        <img src={studentsImg} alt="Hardware" />
                         <div className="text-overlay">HARDWARE & SOFTWARE</div>
                     </div>
                     <div className="details">
@@ -391,7 +397,7 @@ function FranchisePage() {
 
                 <div className="box">
                     <div className="box-content">
-                        <img src="src/assets/franchisepageimages/students.jpg" alt="Curriculum" />
+                        <img src={studentsImg} alt="Curriculum" />
                         <div className="text-overlay">CONTENT & CURRICULUM</div>
                     </div>
                     <div className="details">
@@ -401,7 +407,7 @@ function FranchisePage() {
 
                 <div className="box">
                     <div className="box-content">
-                        <img src="src/assets/franchisepageimages/students.jpg" alt="Training" />
+                        <img src={studentsImg} alt="Training" />
                         <div className="text-overlay">TRAINING & SUPPORT</div>
                     </div>
                     <div className="details">
@@ -433,17 +439,17 @@ function FranchisePage() {
                     
                     <div className="story-viewport">
                         <div className="story-track">
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_1.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_11.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_13.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_14.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_15.png" alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial1} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial11} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial13} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial14} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial15} alt="Story" /></div>
                             
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_1.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_11.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_13.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_14.png" alt="Story" /></div>
-                            <div className="story-item"><img src="src/assets/franchisepageimages/Website Testimonial_15.png" alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial1} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial11} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial13} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial14} alt="Story" /></div>
+                            <div className="story-item"><img src={testimonial15} alt="Story" /></div>
                         </div>
                     </div>
                 </div>

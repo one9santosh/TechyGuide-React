@@ -1,4 +1,5 @@
 import './AboutSection.css';
+import { Link } from 'react-router-dom';
 
 function AboutSection(){
     return(
@@ -6,9 +7,9 @@ function AboutSection(){
             <section className="about">
                 <div className="container">
                     <div className="section-header center-text">
-                        <h2>Transforming Education Through Innovation</h2>
+                        <h2>India’s Leading STEM, AI & Robotics Education Partner</h2>
                         <p className="lead-text">TechyGuide is India's leading EdTech company dedicated to empowering students and educators with cutting-edge AI, Robotics, and STEM education solutions.</p>
-                        <p>We believe in learning by doing, and our hands-on approach prepares students for the challenges of tomorrow. From comprehensive lab setups to DIY kits and virtual courses, we provide everything schools need to nurture the next generation of innovators, problem-solvers, and technology leaders.</p>
+                        <p>TechyGuide provides hands-on learning solutions for students and educators, including AI & Robotics labs, STEM Labs India, STEM DIY kits, virtual courses, and workshops, delivering world-class Robotics Education India and AI Labs India programs. Our mission is to equip students with 21st-century skills, nurturing innovators, problem-solvers, and future technology leaders. <a href="https://www.techyguide.in/about/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline', textDecoration: 'underline', fontWeight: 700, color: 'var(--primary-color)' }}>Learn More About TechyGuide</a></p>
                     </div>
                 </div>
             </section>
@@ -30,7 +31,15 @@ function AboutSection(){
                     </div>
                     <div className="stats-footer">
                         <p>The Best STEM Platform for Students & Educators</p>
-                        <small>Comprehensive learning solutions combining hands-on DIY kits with interactive virtual courses</small>
+                        <small>
+                            Comprehensive learning solutions combining hands-on DIY kits with interactive virtual courses.
+                            <Link
+                                to="/impact-program"
+                                style={{ display: 'inline', textDecoration: 'underline', fontWeight: 700, color: 'var(--accent-color)' }}
+                            >
+                                Partner Your School
+                            </Link>
+                        </small>
                     </div>
                 </div>
             </section>
