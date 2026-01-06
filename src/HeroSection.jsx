@@ -1,5 +1,6 @@
 import "./HeroSection.css";
 import herobgImage from "/src/assets/hero-bg.jpg";
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
   const handleAnchorClick = (e, selector) => {
@@ -51,9 +52,9 @@ function HeroSection() {
             <a href="#schools" className="btn btn-hero-primary" onClick={(e) => handleAnchorClick(e, '#schools')}>
               Explore Labs for Schools &rarr;
             </a>
-            <a href="#shop" className="btn btn-hero-secondary" onClick={(e) => handleAnchorClick(e, '#shop')}>
+            <Link to="/shop" className="btn btn-hero-secondary">
               Shop STEM Kits
-            </a>
+            </Link>
           </div>
         </div>
       </section>

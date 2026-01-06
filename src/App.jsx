@@ -22,6 +22,7 @@ import WhatsAppButton from './WhatsAppButton.jsx'
 import AIRoboticsLabCBSE from './ForschoolsPages/AI-RoboticLabCBSE.jsx'
 import AIRoboticLabICSE from './ForschoolsPages/AI-RoboticLabICSE.jsx'
 import CoursesPage from './coursesPage.jsx'
+import ShopPage from './ShopPage.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -110,7 +111,7 @@ function CoursesPageWrapper() {
 function ShopPageWrapper() {
   return (
     <>
-      <ShopSection />
+      <ShopPage />
       <FooterSection />
     </>
   );

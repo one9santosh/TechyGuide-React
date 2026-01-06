@@ -111,7 +111,7 @@ function Header() {
 
               <li><Link to="/franchise" onClick={closeMenu}>Franchise</Link></li>
 {/* <li><a href="#contact" onClick={(e) => handleAnchorClick(e, '#contact')}>Contact</a></li> */}             
-                <li> <a href="#shop" className="btn-nav nav-shop-cta" onClick={(e) => handleAnchorClick(e, '#shop')}> Shop</a></li>
+                <li><Link to="/shop" className="btn-nav nav-shop-cta" onClick={closeMenu}>Shop</Link></li>
               <li>
                <a
                   href="https://course.techyguide.in"
