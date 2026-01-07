@@ -23,6 +23,7 @@ import AIRoboticsLabCBSE from './ForschoolsPages/AI-RoboticLabCBSE.jsx'
 import AIRoboticLabICSE from './ForschoolsPages/AI-RoboticLabICSE.jsx'
 import CoursesPage from './coursesPage.jsx'
 import ShopPage from './ShopPage.jsx'
+import CheckOutPage from './assets/ShopPageImages/checkOutPage.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,6 +40,7 @@ function App() {
       <Route path="/franchise" element={<FranchisePageWrapper />} />
       <Route path="/courses" element={<CoursesPageWrapper />} />
       <Route path="/shop" element={<ShopPageWrapper />} />
+      <Route path="/checkout" element={<CheckOutPage />} />
     </Routes>
     <ScrollToTop/>
     <WhatsAppButton/>

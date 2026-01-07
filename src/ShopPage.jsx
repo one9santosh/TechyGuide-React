@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ShopPage.css';
 
 import techIot1 from './assets/ShopPageImages/TechIoT Advance Kit-1.webp';
@@ -38,6 +39,7 @@ function ShopPage() {
     const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
     const [currentMediaList, setCurrentMediaList] = useState([]);
     const [activeTab, setActiveTab] = useState('features');
+    const navigate = useNavigate();
 
     const formatPrice = (price) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(price);
 
@@ -50,11 +52,29 @@ function ShopPage() {
     useEffect(() => {
         const saved = localStorage.getItem('techyCart');
         if (saved) setCart(JSON.parse(saved));
+
+        const openCart = localStorage.getItem('openCartOnLoad');
+        if (openCart === 'true') {
+            setIsCartOpen(true);
+            localStorage.removeItem('openCartOnLoad');
+        }
     }, []);
 
     useEffect(() => {
         localStorage.setItem('techyCart', JSON.stringify(cart));
     }, [cart]);
+
+    useEffect(() => {
+        const handlePageFocus = () => {
+            const saved = localStorage.getItem('techyCart');
+            if (saved) {
+                setCart(JSON.parse(saved));
+            }
+        };
+
+        window.addEventListener('focus', handlePageFocus);
+        return () => window.removeEventListener('focus', handlePageFocus);
+    }, []);
 
     useEffect(() => {
         filterProducts();
@@ -122,10 +142,25 @@ function ShopPage() {
     };
 
     const handleBuyNow = (id) => {
-        handleAddClick(id);
+        const product = products.find(p => p.id === id);
+        const existing = cart.find(c => c.id === id);
+        
+        if (!existing) {
+            const updatedCart = [...cart, { ...product, quantity: 1 }];
+            setCart(updatedCart);
+            localStorage.setItem('techyCart', JSON.stringify(updatedCart));
+        }
+        
+        closeModal();
         setTimeout(() => {
-            alert('Redirecting to checkout...');
-        }, 300);
+            navigate('/checkout');
+        }, 100);
+    };
+
+    const handleProceedToCheckout = () => {
+        if (cart.length === 0) return;
+        setIsCartOpen(false);
+        navigate('/checkout');
     };
 
     const openProductModal = (id) => {
@@ -256,7 +291,11 @@ function ShopPage() {
                         <span>Total:</span>
                         <span>{formatPrice(cartTotal)}</span>
                     </div>
-                    <button className="btn-checkout">PROCEED TO BUY</button>
+                    {cart.length === 0 ? (
+                        <button className="btn-checkout" onClick={() => setIsCartOpen(false)}>Add items to cart</button>
+                    ) : (
+                        <button className="btn-checkout" onClick={handleProceedToCheckout}>PROCEED TO BUY</button>
+                    )}
                 </div>
             </div>
             <div className={`cart-overlay ${isCartOpen ? 'open' : ''}`} onClick={toggleCart}></div>

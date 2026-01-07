@@ -11,7 +11,7 @@ function FooterSection(){
                         <h3>TechyGuide</h3>
                         
                         <div className="contact-info">
-                            <p><a href="tel:+919114036376"><i className="fas fa-phone-alt"></i> +91 91140 36376</a></p>
+                            <p><a href="tel:+919114036376"><i className="fas fa-phone-alt"></i> +91 8197984847</a></p>
                             <p><a href="mailto:reachus@techyguide.in"><i className="fas fa-envelope"></i> reachus@techyguide.in</a></p>
                             <p>
                                 <i className="fas fa-map-marker-alt"></i> India - Serving Schools

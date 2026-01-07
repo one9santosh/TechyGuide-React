@@ -58,7 +58,7 @@ function Header() {
       <div className="top-bar" id="home">
         <div className="container">
           <span>
-            <a href="tel:+919114036376"><i className="fas fa-phone-alt"></i> +91 91140 36376</a>
+            <a href="tel:+919114036376"><i className="fas fa-phone-alt"></i> +91 8197984847</a>
           </span>
           <span>
             <a href="mailto:reachus@techyguide.in"><i className="fas fa-envelope"></i> reachus@techyguide.in</a>
