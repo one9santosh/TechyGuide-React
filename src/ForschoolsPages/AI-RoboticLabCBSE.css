@@ -1051,7 +1051,7 @@
 	.ai-roboticslab-cbse-root .form-row { grid-template-columns: 1fr; gap: 0; }
 }
 
-.ai-roboticslab-cbse-root .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; color: #94a3b8; }
+.ai-roboticslab-cbse-root .copyright { display: none; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; color: #94a3b8; }
 
 /* =========================================
    18. ANIMATIONS

@@ -1140,7 +1140,7 @@
 	font-size: 1rem;
 }
 
-.ai-roboticlab-icse-root .copyright { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; color: #94a3b8; }
+.ai-roboticlab-icse-root .copyright { display: none; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; color: #94a3b8; }
 
 /* =========================================
    16. ANIMATIONS & RESPONSIVE

@@ -43,7 +43,7 @@ function FooterSection(){
                     </div>
                 </div>
                 <div className="bottom-bar">
-                    <p>&copy; 2025 TechyGuide Private Limited. All Rights Reserved.</p>
+                    <p>&copy; 2021 TechyGuide Private Limited. All Rights Reserved.</p>
                 </div>
             </footer>
         </>
