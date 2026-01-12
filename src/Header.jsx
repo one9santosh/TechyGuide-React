@@ -115,6 +115,8 @@ function Header() {
           <nav>
             <ul id="nav-links" className={menuOpen ? 'active' : ''}>
 
+              <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+
               <li className="dropdown">
                 <a href="#shop" onClick={toggleProductsDropdown}>
                   Products <i className="fas fa-chevron-down"></i>
@@ -138,7 +140,7 @@ function Header() {
                   <li><Link to="/ai-roboticslab-icse" onClick={closeMenu}>AI & Robotics Lab ICSE</Link></li>
                   <li><Link to="/schools/stem-tinkering-lab" onClick={closeMenu}>STEM Tinkering Lab</Link></li>
                   <li><a href="#" onClick={closeMenu}>STEM Lab </a></li>
-                  <li><a href="#" onClick={closeMenu}>Workshop</a></li>
+                  <li><Link to="/schools/workshop" onClick={closeMenu}>Workshop</Link></li>
                   <li><Link to="/schools/composite-skill-lab" onClick={closeMenu}>Composite Skill Lab</Link></li>
 
                 </ul>

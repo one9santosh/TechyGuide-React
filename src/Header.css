@@ -29,22 +29,24 @@ header {
 
 .nav-container {
     display: flex;
-    justify-content: flex-start; /* keep nav closer to logo instead of pushing to far right */
+    justify-content: flex-start;
     align-items: center;
-    gap: 40px;
-    height: 80px; /* Increased slightly to accommodate the logo */
+    gap: 30px;
+    height: 80px;
+    flex-wrap: nowrap;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 16px;
-    flex: 1; /* fill remaining space */
+    gap: 12px;
+    flex: 1;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .logo-link {
@@ -53,26 +55,23 @@ nav {
 }
 
 .logo img {
-    height: 60px; /* Adjusts height to fit the navbar */
-    width: auto;  /* Maintains aspect ratio */
+    height: 55px;
+    width: auto;
     display: block;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    gap: 25px;
-    margin-left: auto; /* push entire list to the right */
-}
-
-.nav-shop-cta {
-    white-space: nowrap;
+    gap: 18px;
+    margin-left: auto;
 }
 
 nav ul li a {
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.3s;
+    white-space: nowrap;
 }
 
 nav ul li a:hover {
@@ -89,8 +88,10 @@ nav ul li a:hover {
 .btn-nav {
     background-color: var(--accent-color);
     color: var(--white) !important;
-    padding: 8px 20px;
+    padding: 7px 16px;
     border-radius: 20px;
+    font-size: 0.85rem !important;
+    white-space: nowrap;
 }
 
 /* --- Dropdown Menu Styles --- */

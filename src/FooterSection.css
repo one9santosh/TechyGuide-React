@@ -21,6 +21,15 @@ footer ul li {
 	margin-bottom: 10px;
 }
 
+.quick-links-grid {
+	list-style: none;
+	padding: 0;
+}
+
+.quick-links-grid li {
+	margin-bottom: 10px;
+}
+
 footer ul li a:hover {
 	color: var(--white);
 }
@@ -56,6 +65,19 @@ footer ul li a:hover {
 
 	footer ul li {
 		margin-bottom: 8px;
+	}
+
+	.quick-links-grid {
+		display: grid !important;
+		grid-template-columns: 1fr 1fr !important;
+		gap: 10px !important;
+		text-align: left !important;
+		list-style: none;
+		padding: 0;
+	}
+
+	.quick-links-grid li {
+		margin-bottom: 0 !important;
 	}
 
 	.contact-info p {

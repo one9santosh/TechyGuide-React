@@ -250,7 +250,7 @@ function CoursesPage() {
   return (
     <div className="courses-page-root">
       <header className="hero" id="home">
-        <div className="hero-bg" style={{ backgroundImage: `url(${bgImg})` }}></div>
+        <div className="hero-bg" style={{ backgroundImage: `url(${bgImg})` }} aria-label="Students learning robotics and coding online with TechyGuide in India"></div>
         <div className="hero-overlay"></div>
         <div className="hero-container">
           <div className="hero-image">
@@ -268,53 +268,53 @@ function CoursesPage() {
       </header>
 
       <section className="courses-section" id="courses">
-        <h2 className="courses-title">Our <span className="accent">Courses</span></h2>
+        <h2 className="courses-title"><span className="accent">Industry-Relevant Skills for Young Innovators </span></h2>
         <div className="grid-wrapper">
           <div className="card">
-            <img src={bgImg} className="card-img" alt="img-bg" />
-            <h2 className="courses-name">Robotics</h2>
+            <img src={bgImg} className="card-img" alt="Student building a robot during TechyGuide robotics course" />
+            <h2 className="courses-name">Robotics & Hardware</h2>
             <p>Master hardware and automation.</p>
-            <p>Build intelligent robots and learn engineering fundamentals.</p>
+            <p>Build intelligent machines while learning electronics, sensors, and automation concepts. Students design robots that interact with the physical world. </p>
             <button className="know-more" data-course="Robotics">Know more</button>
               <Link to="/shop" className="btn-claim">Buy Now</Link>
           </div>
           <div className="card">
-            <img src={robotImg} className="card-img" alt="robot-img" />
+            <img src={robotImg} className="card-img" alt="Kids learning Python programming online with TechyGuide" />
             <h2 className="courses-name">Python Coding</h2>
             <p>Learn logic and programming.</p>
-            <p>Start your coding journey with Python's simple syntax.</p>
+            <p>Learn logical thinking and programming using Python’s beginner-friendly syntax. Ideal for automation, data handling, and AI foundations. </p>
             <button className="know-more" data-course="Coding">Know more</button>
               <Link to="/shop" className="btn-claim">Buy Now</Link>
           </div>
           <div className="card">
-            <img src={robotImg} className="card-img" alt="robot-img" />
+            <img src={robotImg} className="card-img" alt="Student exploring artificial intelligence concepts in online class" />
             <h2 className="courses-name">Artificial Intelligence</h2>
             <p>Explore the future of tech.</p>
-            <p>Create smart systems that learn and adapt automatically.</p>
+            <p>Explore machine learning, neural networks, and smart decision-making systems. Students build AI models that learn and adapt. </p>
             <button className="know-more" data-course="AI">Know more</button>
               <Link to="/shop" className="btn-claim">Buy Now</Link>
           </div>
           <div className="card">
-            <img src={robotImg} className="card-img" alt="robot-img" />
+            <img src={robotImg} className="card-img" alt="Student creating mobile app during TechyGuide app development course" />
             <h2 className="courses-name">App Development</h2>
             <p>Build mobile apps.</p>
-            <p>Design user-friendly applications for smartphones and tablets.</p>
+            <p>Design and develop mobile applications with intuitive interfaces and real functionality for Android platforms. </p>
             <button className="know-more" data-course="AppDev">Know more</button>
               <Link to="/shop" className="btn-claim">Buy Now</Link>
           </div>
           <div className="card">
-            <img src={robotImg} className="card-img" alt="img" />
+            <img src={robotImg} className="card-img" alt="Student designing website during TechyGuide web development course" />
             <h2 className="courses-name">Web Development</h2>
             <p>Create modern websites.</p>
-            <p>Learn HTML, CSS, and JavaScript for interactive web pages.</p>
+            <p>Learn HTML, CSS, and JavaScript to create responsive, modern websites from scratch. </p>
             <button className="know-more" data-course="WebDev">Know more</button>
               <Link to="/shop" className="btn-claim">Buy Now</Link>
           </div>
           <div className="card">
-            <img src={robotImg} className="card-img" alt="img" />
-            <h2 className="courses-name">Games</h2>
+            <img src={robotImg} className="card-img" alt="Student developing a game in TechyGuide online class" />
+            <h2 className="courses-name">Game Development </h2>
             <p>Design 2D and 3D games.</p>
-            <p>Develop engaging gameplay mechanics and stunning visuals.</p>
+            <p>Create engaging 2D and 3D games while understanding game mechanics, logic, and design principles. </p>
             <button className="know-more" data-course="Games">Know more</button>
               <Link to="/shop" className="btn-claim">Buy Now</Link>
           </div>
@@ -359,76 +359,78 @@ function CoursesPage() {
 
       <section className="info-flow-section">
         <div className="content-wrapper">
-          <h2 className="main-title">Why Master These Fields?</h2>
+          <h2 className="main-title">Future-Ready Learning Paths </h2>
 
           <div className="flow-row">
             <div className="flow-image">
-              <img src={pythonImg} alt="Robotics" />
+              <img src={pythonImg} alt="Student building a robot during TechyGuide robotics course" />
             </div>
             <div className="flow-text">
               <span className="number">01</span>
               <h3>Robotics & Hardware</h3>
-              <p>Bridge the gap between digital logic and physical action. Robotics teaches you to build systems that interact with the real world, from autonomous drones to surgical assistants.</p>
+              <p>Bridge the gap between digital logic and physical action. Robotics teaches you to build systems that interact with the real world, from autonomous drones to surgical assistants.Connect software logic with real-world action by building autonomous systems and smart machines. </p>
               <div className="underline"></div>
             </div>
           </div>
 
           <div className="flow-row reverse">
             <div className="flow-image">
-              <img src={pythonImg} alt="AI" />
+              <img src={pythonImg} alt="Student exploring artificial intelligence concepts in online class" />
             </div>
             <div className="flow-text">
               <span className="number">02</span>
               <h3>Artificial Intelligence</h3>
-              <p>Artificial Intelligence is the foundational layer of modern industry. Master neural networks and machine learning to build systems that learn and solve complex global challenges.</p>
+              <p>Artificial Intelligence is the foundational layer of modern industry. Master neural networks and machine learning to build systems that learn and solve complex global challenges.Understand the technology driving modern industries, from healthcare to space exploration.  </p>
               <div className="underline"></div>
             </div>
           </div>
 
           <div className="flow-row">
             <div className="flow-image">
-              <img src={pythonImg} alt="Python" />
+              <img src={pythonImg} alt="Kids learning Python programming online with TechyGuide" />
             </div>
             <div className="flow-text">
               <span className="number">03</span>
               <h3>Python Programming</h3>
-              <p>The core of data science and automation. Python's simplicity allows for rapid prototyping, making it the most versatile tool for engineers at NASA and Google.</p>
+              <p>The core of data science and automation. Python's simplicity allows for rapid prototyping, making it the most versatile tool for engineers at NASA and Google.A powerful, versatile language used by top global organizations for automation and data science. </p>
               <div className="underline"></div>
             </div>
           </div>
 
           <div className="flow-row reverse">
             <div className="flow-image">
-              <img src={pythonImg} alt="AI" />
+              <img src={pythonImg} alt="Student creating mobile app during TechyGuide app development course" />
             </div>
             <div className="flow-text">
               <span className="number">04</span>
               <h3>App Development & Web Development</h3>
-              <p>Artificial Intelligence is the foundational layer of modern industry. Master neural networks and machine learning to build systems that learn and solve complex global challenges.</p>
+              <p>Learn how digital products are built, deployed, and scaled in the modern tech ecosystem.We help children become young creators of technology, not just users. In this program, students learn how to design and build their own websites and mobile apps using simple, fun, and interactive methods. </p>
               <div className="underline"></div>
             </div>
           </div>
 
           <div className="flow-row">
             <div className="flow-image">
-              <img src={pythonImg} alt="Python" />
+              <img src={pythonImg} alt="Student designing website during TechyGuide web development course" />
             </div>
             <div className="flow-text">
               <span className="number">05</span>
-              <h3>Python Programming</h3>
-              <p>The core of data science and automation. Python's simplicity allows for rapid prototyping, making it the most versatile tool for engineers at NASA and Google.</p>
+              <h3>Web Development</h3>
+              <p>Learn HTML, CSS, and JavaScript to create responsive, modern websites from scratch. </p>
               <div className="underline"></div>
             </div>
           </div>
 
           <div className="flow-row reverse">
             <div className="flow-image">
-              <img src={pythonImg} alt="AI" />
+              <img src={pythonImg} alt="Student developing a game in TechyGuide online class" />
             </div>
             <div className="flow-text">
               <span className="number">06</span>
-              <h3>App Development & Web Development</h3>
-              <p>Artificial Intelligence is the foundational layer of modern industry. Master neural networks and machine learning to build systems that learn and solve complex global challenges.</p>
+              <h3>Game Development </h3>
+              <p>Create engaging 2D and 3D games while understanding game mechanics, logic, and design principles. 
+
+  </p>
               <div className="underline"></div>
             </div>
           </div>
@@ -436,22 +438,23 @@ function CoursesPage() {
       </section>
 
       <section className="stats-ribbon-section">
+        <h2 className="section-title">Proven Results Across India</h2>
         <div className="stats-ribbon-container">
           <div className="stat-box">
             <div className="stat-number" data-target="1500">0</div>
             <div className="stat-label">Clients Served</div>
           </div>
           <div className="stat-box">
-            <div className="stat-number" data-target="98">0</div>
-            <div className="stat-label">Success Rate %</div>
+            <div className="stat-number stat-number-percent" data-target="98">0</div>
+            <div className="stat-label">STUDENT Success Rate %</div>
           </div>
           <div className="stat-box">
             <div className="stat-number" data-target="25">0</div>
-            <div className="stat-label">Years Experience</div>
+            <div className="stat-label">Years of Combined Experience</div>
           </div>
           <div className="stat-box">
             <div className="stat-number" data-target="400">0</div>
-            <div className="stat-label">Global Partners</div>
+            <div className="stat-label">Global Academic & Industry Partners</div>
           </div>
         </div>
       </section>
@@ -459,7 +462,7 @@ function CoursesPage() {
       <section className="reels-section">
         <div className="section-header">
           <p className="tagline">STUDENT SHOWCASE</p>
-          <h2 className="section-title">Classroom <span className="accent">Moments</span></h2>
+          <h2 className="section-title1">Classroom <span className="accent">Moments</span></h2>
         </div>
 
         <div className="reels-wrapper">
@@ -610,7 +613,7 @@ function CoursesPage() {
 
       <section className="section" id="stories">
         <div className="container">
-          <h2 className="section-title">Success Stories</h2>
+          <h2 className="section-title">What Parents, Students & Educators Say </h2>
           
           <div className="story-viewport">
             <div className="story-track">
