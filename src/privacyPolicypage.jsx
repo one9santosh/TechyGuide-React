@@ -39,25 +39,28 @@ export default function PrivacyPolicyPage() {
 
         window.addEventListener('scroll', onScroll);
 
-        // 3. Smooth Scrolling for Anchors
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    // Calculate scroll position with offset
-                    const elementPosition = targetSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - 80;
+        // 3. Smooth Scrolling for Anchors - ONLY within privacy policy
+        const privacyRoot = document.querySelector('.privacy-policy-page-root');
+        if (privacyRoot) {
+            privacyRoot.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        // Calculate scroll position with offset
+                        const elementPosition = targetSection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - 80;
 
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
             });
-        });
+        }
 
         // Cleanup
         return () => {

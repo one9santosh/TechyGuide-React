@@ -12,17 +12,27 @@
     --radius: 16px;
     
     /* Reset and isolation */
-    all: initial;
     display: block;
     background-color: #f3f4f6;
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #1f2937;
     line-height: 1.6;
     overflow-x: hidden;
-    min-height: 100vh;
     width: 100%;
     position: relative;
     z-index: 1;
+    pointer-events: auto;
+}
+
+/* Ensure header and footer are not blocked */
+header, footer {
+    position: relative !important;
+    z-index: 1000 !important;
+    pointer-events: auto !important;
+}
+
+header *, footer * {
+    pointer-events: auto !important;
 }
 
 .privacy-policy-page-root * {
@@ -73,7 +83,6 @@
     gap: 60px !important;
     align-items: start !important;
     position: relative !important;
-    min-height: 100vh !important;
 }
 
 /* Sidebar */
