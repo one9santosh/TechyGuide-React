@@ -9,6 +9,20 @@ import testimonial15 from './assets/franchisepageimages/Website Testimonial_15.p
 
 function FranchisePage() {
     useEffect(() => {
+        // Animation observer for scroll-triggered animations
+        const animationObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => animationObserver.observe(el));
+
         const counters = document.querySelectorAll('.counter');
         let started = false;
 

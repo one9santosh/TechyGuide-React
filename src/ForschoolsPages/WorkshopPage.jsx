@@ -3,6 +3,20 @@ import './WorkshopPage.css';
 
 function WorkshopPage() {
 	useEffect(() => {
+		// Animation observer for scroll-triggered animations
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("show");
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+
+		document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+
 		// Smooth Scroll within workshop page root
 		const root = document.querySelector('.workshop-page-root');
 		const anchors = root ? root.querySelectorAll('a[href^="#"]') : [];

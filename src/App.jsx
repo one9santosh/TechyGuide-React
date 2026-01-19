@@ -1,13 +1,10 @@
-import { useState } from 'react'
+import { useState, Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 //import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 //import './App.css'
 import Header from './Header.jsx'
 import HeroSection from './HeroSection'
-import ImpactProgram from './ImpactProgram.jsx'
-import IBoT from './productPages/I-BoT.jsx'
-import FranchisePage from './FranchisePage.jsx'
 import AboutSection from './AboutSection'
 import ShopSection from './ShopSection'
 import SchoolSection from './SchoolSection'
@@ -19,19 +16,27 @@ import CommunitySection from './CommunitySection.jsx'
 import FooterSection from './FooterSection.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
 import WhatsAppButton from './WhatsAppButton.jsx'
-import AIRoboticsLabCBSE from './ForschoolsPages/AI-RoboticLabCBSE.jsx'
-import AIRoboticLabICSE from './ForschoolsPages/AI-RoboticLabICSE.jsx'
-import StemTinkeringLab from './ForschoolsPages/StemTinkeringLab.jsx'
-import StemLab from './ForschoolsPages/StemLab.jsx'
-import CompositeSkillLab from './ForschoolsPages/CompositeSkillLab.jsx'
-import WorkshopPage from './ForschoolsPages/WorkshopPage.jsx'
-import CoursesPage from './coursesPage.jsx'
-import ShopPage from './ShopPage.jsx'
-import CheckOutPage from './CheckOutPage.jsx'
-import PrivacyPolicyPage from './privacyPolicypage.jsx'
-import TeBoT from './productPages/TeBoT.jsx'
-import EBlox from './productPages/E-Blox.jsx'
-import EAddOnKit from './productPages/AddOnKit.jsx'
+
+// Lazy load pages
+const ImpactProgram = lazy(() => import('./ImpactProgram.jsx'))
+const AIRoboticsLabCBSE = lazy(() => import('./ForschoolsPages/AI-RoboticLabCBSE.jsx'))
+const AIRoboticLabICSE = lazy(() => import('./ForschoolsPages/AI-RoboticLabICSE.jsx'))
+const StemTinkeringLab = lazy(() => import('./ForschoolsPages/StemTinkeringLab.jsx'))
+const StemLab = lazy(() => import('./ForschoolsPages/StemLab.jsx'))
+const CompositeSkillLab = lazy(() => import('./ForschoolsPages/CompositeSkillLab.jsx'))
+const WorkshopPage = lazy(() => import('./ForschoolsPages/WorkshopPage.jsx'))
+const CoursesPage = lazy(() => import('./coursesPage.jsx'))
+const ShopPage = lazy(() => import('./ShopPage.jsx'))
+const FranchisePage = lazy(() => import('./FranchisePage.jsx'))
+const CheckOutPage = lazy(() => import('./CheckOutPage.jsx'))
+const PrivacyPolicyPage = lazy(() => import('./privacyPolicypage.jsx'))
+const IBoT = lazy(() => import('./productPages/I-BoT.jsx'))
+const TeBoT = lazy(() => import('./productPages/TeBoT.jsx'))
+const EBlox = lazy(() => import('./productPages/E-Blox.jsx'))
+const EAddOnKit = lazy(() => import('./productPages/AddOnKit.jsx'))
+
+// Loading fallback component
+const LoadingFallback = () => <div style={{ padding: '40px', textAlign: 'center', fontSize: '18px' }}>Loading...</div>
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,25 +44,27 @@ function App() {
  return (
   <>
     <Header/>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/impact-program" element={<ImpactProgram />} />
-      <Route path="/i-bot" element={<IBoTPage />} />
-      <Route path="/tebot" element={<TeBoTPage />} />
-      <Route path="/e-blox" element={<EBloxPage />} />
-      <Route path="/add-on-kits" element={<EAddOnKitPage />} />
-      <Route path="/ai-roboticslab-cbse" element={<AIRoboticsLabCBSEPage />} />
-      <Route path="/ai-roboticslab-icse" element={<AIRoboticLabICSEPage />} />
-      <Route path="/schools/stem-lab" element={<StemLabPage />} />
-      <Route path="/schools/stem-tinkering-lab" element={<StemTinkeringLabPage />} />
-      <Route path="/schools/composite-skill-lab" element={<CompositeSkillLabPage />} />
-      <Route path="/schools/workshop" element={<WorkshopPageWrapper />} />
-      <Route path="/franchise" element={<FranchisePageWrapper />} />
-      <Route path="/courses" element={<CoursesPageWrapper />} />
-      <Route path="/shop" element={<ShopPageWrapper />} />
-      <Route path="/checkout" element={<CheckOutPage />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicyPageWrapper />} />
-    </Routes>
+    <Suspense fallback={<LoadingFallback />}>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/impact-program" element={<ImpactProgram />} />
+        <Route path="/i-bot" element={<IBoT />} />
+        <Route path="/tebot" element={<TeBoT />} />
+        <Route path="/e-blox" element={<EBlox />} />
+        <Route path="/add-on-kits" element={<EAddOnKit />} />
+        <Route path="/ai-roboticslab-cbse" element={<AIRoboticsLabCBSE />} />
+        <Route path="/ai-roboticslab-icse" element={<AIRoboticLabICSE />} />
+        <Route path="/schools/stem-lab" element={<StemLab />} />
+        <Route path="/schools/stem-tinkering-lab" element={<StemTinkeringLab />} />
+        <Route path="/schools/composite-skill-lab" element={<CompositeSkillLab />} />
+        <Route path="/schools/workshop" element={<WorkshopPage />} />
+        <Route path="/franchise" element={<FranchisePage />} />
+        <Route path="/courses" element={<CoursesPage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/checkout" element={<CheckOutPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+      </Routes>
+    </Suspense>
     <ScrollToTop/>
     <WhatsAppButton/>
   </>

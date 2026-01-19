@@ -3,6 +3,20 @@ import './privacyPolicypage.css';
 
 export default function PrivacyPolicyPage() {
     useEffect(() => {
+        // Animation observer for scroll-triggered animations
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+
         // 1. Date Logic
         const dateSpan = document.getElementById('current-date');
         if (dateSpan) {

@@ -4,6 +4,20 @@ import heroImage from '../assets/ForSchoolsStemLabImages/virtual-learning-MZKzsg
 
 function StemLab() {
     useEffect(() => {
+        // Animation observer for scroll-triggered animations
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+
         let statsObserver = null;
         let vpObserver = null;
 

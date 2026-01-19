@@ -468,3 +468,11 @@
         font-size: 0.85rem;
     }
 }
+
+/* =========================================
+   ANIMATION CLASSES
+   ========================================= */
+.privacy-policy-page-root .hidden-left { opacity: 0; transform: translateX(-30px); transition: 0.8s; }
+.privacy-policy-page-root .hidden-right { opacity: 0; transform: translateX(30px); transition: 0.8s; }
+.privacy-policy-page-root .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.privacy-policy-page-root .show { opacity: 1; transform: translate(0); }

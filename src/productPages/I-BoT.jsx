@@ -18,6 +18,20 @@ function IBoT() {
         const root = rootRef.current;
         if (!root) return;
 
+        // Animation observer for scroll-triggered animations
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        root.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+
         let stopFns = [];
 
         // Hero-specific interactions (scoped)
@@ -119,12 +133,12 @@ function IBoT() {
         root.addEventListener('click', handleAnchorClick);
 
         // Intersection Observer for fade-in animations (scoped)
-        const observer = new IntersectionObserver((entries) => {
+        const fadeObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
+                    fadeObserver.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.15 });
@@ -134,7 +148,7 @@ function IBoT() {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
+            fadeObserver.observe(el);
         });
 
         // Auto-scroll projects and testimonials with true circular infinite loop

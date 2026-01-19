@@ -794,3 +794,11 @@
         height: 100px;
     }
 }
+
+/* =========================================
+   ANIMATION CLASSES
+   ========================================= */
+.franchise-page .hidden-left { opacity: 0; transform: translateX(-30px); transition: 0.8s; }
+.franchise-page .hidden-right { opacity: 0; transform: translateX(30px); transition: 0.8s; }
+.franchise-page .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.franchise-page .show { opacity: 1; transform: translate(0); }

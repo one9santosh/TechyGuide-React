@@ -19,6 +19,20 @@ import testimonial15 from './assets/CoursesPageImages/Website Testimonial_15.png
 
 function CoursesPage() {
   useEffect(() => {
+    // Animation observer for scroll-triggered animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+
     // All JavaScript logic from script.js
     function openCourse(courseKey) {
       const modal = document.getElementById('courseModal');
@@ -207,16 +221,16 @@ function CoursesPage() {
           };
 
           updateCount();
-          observer.unobserve(counter);
+          countingObserver.unobserve(counter);
         }
       });
     };
 
-    const observer = new IntersectionObserver(startCounting, {
+    const countingObserver = new IntersectionObserver(startCounting, {
       threshold: 0.5
     });
 
-    counters.forEach(counter => observer.observe(counter));
+    counters.forEach(counter => countingObserver.observe(counter));
 
     // Attach event handlers to buttons
     const knowMoreButtons = document.querySelectorAll('.courses-page-root .know-more');
