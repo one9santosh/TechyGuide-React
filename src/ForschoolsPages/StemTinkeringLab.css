@@ -276,7 +276,7 @@
 .stem-tinkering-lab-root .hero-btns {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 5px;
   flex-wrap: wrap;
   margin-top: 10px;
   position: relative;

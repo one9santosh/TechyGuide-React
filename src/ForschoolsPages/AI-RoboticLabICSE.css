@@ -1191,18 +1191,6 @@
 	.ai-roboticlab-icse-root .contact-grid { grid-template-columns: 1fr; }
 }
 
-/* Mobile-only spacing for hero buttons */
-@media (max-width: 768px) {
-	.ai-roboticlab-icse-root .hero-btns {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-		align-items: center;
-		justify-content: center;
-	}
-	.ai-roboticlab-icse-root .hero-btns a { width: auto; }
-}
-
 .ai-roboticlab-icse-root .slider-wrapper {
 	position: relative;
 	flex: 1;
