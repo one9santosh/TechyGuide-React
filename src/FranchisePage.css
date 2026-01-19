@@ -64,7 +64,7 @@
 .franchise-page .hero {
     position: relative;
     min-height: calc(80vh + 113px);
-    background: url('./assets/FranchisePageImages/creates.jpg') no-repeat center center/cover;
+    background: url('/techyguide/src/assets/FranchisePageImages/creates.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     display: flex; align-items: center; justify-content: center;
     text-align: center;

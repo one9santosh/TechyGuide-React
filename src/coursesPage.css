@@ -63,7 +63,7 @@
 
 .courses-page-root .hero-bg {
     /* Changed 'center center' to 'center 60%' */
-    background: url('./assets/CoursesPageImages/5073198.jpg') no-repeat center 30%/cover;
+    background: url('/techyguide/src/assets/CoursesPageImages/5073198.jpg') no-repeat center 30%/cover;
     
     position: absolute;
     inset: 0;

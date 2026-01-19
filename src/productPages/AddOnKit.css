@@ -45,9 +45,9 @@
 	font-family: 'Inter', -apple-system, sans-serif;
 	background:
 		linear-gradient(rgba(0, 255, 149, 0.267), rgba(0, 130, 115, 0.25)),
-		url('../assets/ProductsAddOnImages/9058106.png'),
+		url('/techyguide/src/assets/ProductsAddOnImages/9058106.png'),
 		linear-gradient(rgba(0, 130, 115, 0.6), rgba(0, 130, 115, 0.6)),
-		url('../assets/ProductsAddOnImages/5073198.jpg'),
+		url('/techyguide/src/assets/ProductsAddOnImages/5073198.jpg'),
 		#008273;
 	background-repeat: no-repeat;
 	background-position: 60% 30%;

@@ -7,11 +7,11 @@
         /* Top color tint (light tech glow) */
         linear-gradient(rgba(78, 224, 163, 0.25), rgba(61, 174, 161, 0.25)),
         /* Foreground tech pattern */
-        url("../assets/ProductI-BoTImages/5073198.png"),
+        url("/techyguide/src/assets/ProductI-BoTImages/5073198.png"),
         /* Deep overlay (to match static contrast) */
         linear-gradient(rgba(30, 127, 116, 0.6), rgba(5, 123, 110, 0.6)),
         /* Base background image */
-        url("../assets/ProductI-BoTImages/10893802.jpg"),
+        url("/techyguide/src/assets/ProductI-BoTImages/10893802.jpg"),
         #008273;
 
     background-repeat: no-repeat;
