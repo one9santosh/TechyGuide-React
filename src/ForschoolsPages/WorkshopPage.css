@@ -35,9 +35,9 @@
 	display: flex; 
 	align-items: center; 
 	justify-content: center;
-	min-height: 90vh;
-	margin-top: -113px;
-	padding-top: 113px;
+	min-height: 113vh;
+	margin-top: -100px;
+	padding-top: 90px;
 }
 .workshop-page-root .hero-bg-shape { position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: rgba(255,123,0,0.05); border-radius: 50%; z-index: 0; }
 
