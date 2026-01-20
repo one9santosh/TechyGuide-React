@@ -188,7 +188,7 @@ function StemTinkeringLab() {
             <h1>Igniting Young Minds with <br /><span className="highlight-text">STEM Tinkering Labs</span></h1>
             <p>A space for "Making, Breaking, and Creating." Empowering students with hands-on skills in <strong>Robotics, IoT, 3D Printing, and AI</strong> to solve real-world problems.</p>
             <div className="hero-btns">
-              <a href="#packages" className="btn btn-orange">View Lab Packages</a>
+              <a href="#packages" className="btn btn-orange">Setup Lab</a>
               <a href="#curriculum" className="btn btn-glass">Curriculum</a>
             </div>
           </div>

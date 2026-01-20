@@ -205,7 +205,7 @@ const AIRoboticLabICSE = () => {
 							Comprehensive Lab Solutions for <strong>Subject Code 066 (AI)</strong>. Fully aligned with CISCE guidelines and NEP 2020 to foster innovation and hands-on learning.
 						</p>
 						<div className="hero-btns">
-							<a href="#packages" className="btn btn-orange">View ICSE Packages</a>
+							<a href="#packages" className="btn btn-orange">Setup Lab</a>
 							<a href="#curriculum" className="btn btn-glass">Curriculum</a>
 						</div>
 					</div>
