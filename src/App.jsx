@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 //import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from '/TG-Square-Logo 3.png'
 //import './App.css'
 import Header from './Header.jsx'
 import HeroSection from './HeroSection'
