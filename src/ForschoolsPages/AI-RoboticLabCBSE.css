@@ -1079,7 +1079,7 @@
 	.ai-roboticslab-cbse-root .brand-tag { margin-left: auto; margin-right: auto; }
 	.ai-roboticslab-cbse-root .hero-text h1 { font-size: 2.8rem; }
 	.ai-roboticslab-cbse-root .hero-text p { font-size: 1.05rem; }
-	.ai-roboticslab-cbse-root .hero-btns { display: flex; justify-content: center; }
+	.ai-roboticslab-cbse-root .hero-btns { display: flex; flex-direction: row; justify-content: center; gap: 12px;}
 	.ai-roboticslab-cbse-root .guide-card { flex-direction: column; }
 	.ai-roboticslab-cbse-root .guide-img, .ai-roboticslab-cbse-root .guide-content { width: 100%; }
 	.ai-roboticslab-cbse-root .diy-container { grid-template-columns: 1fr; }
