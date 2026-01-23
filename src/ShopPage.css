@@ -212,3 +212,11 @@
     .shop-page-wrapper .cart-sidebar { width: 320px; top: 88px; height: calc(100vh - 88px); }
     .shop-page-wrapper .search-wrapper { max-width: none; }
 }
+
+/* =========================================
+   ANIMATION CLASSES
+   ========================================= */
+.shop-page-wrapper .hidden-left { opacity: 0; transform: translateX(-30px); transition: 0.8s; }
+.shop-page-wrapper .hidden-right { opacity: 0; transform: translateX(30px); transition: 0.8s; }
+.shop-page-wrapper .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.shop-page-wrapper .show { opacity: 1; transform: translate(0); }

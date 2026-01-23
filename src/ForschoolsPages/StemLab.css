@@ -710,3 +710,11 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   ANIMATION CLASSES
+   ========================================= */
+.stemlab-page-root .hidden-left { opacity: 0; transform: translateX(-30px); transition: 0.8s; }
+.stemlab-page-root .hidden-right { opacity: 0; transform: translateX(30px); transition: 0.8s; }
+.stemlab-page-root .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.stemlab-page-root .show { opacity: 1; transform: translate(0); }

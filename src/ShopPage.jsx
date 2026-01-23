@@ -15,6 +15,22 @@ import pen2 from './assets/ShopPageImages/3d pen 2.webp';
 import pen3 from './assets/ShopPageImages/3d pen 3.webp';
 
 function ShopPage() {
+    useEffect(() => {
+        // Animation observer for scroll-triggered animations
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+    }, []);
+
     const products = [
         { id: 1, title: "STEM Bundle", price: 23999, originalPrice: 29999, rating: 4.9, image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", description: "It is a 5 in 1 stem kit of Robotics, 3D Printing, IoT, Artificial Intelligence and Coding . In this course we provide 90 Live Classes along with Lifetime Access to Course ID. In this course you will be regularly tested in the forms of assignment. It's a unique learning opportunity for the kids and will enable them to succeed in the fields of Stem technology.", features: ["☑ 90 Live Classes", "☑ Lifetime Access to Course ID", "☑ Certificate", "☑ Assignment", "☑ 2 in 1 STEM Kit"], images: ["https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", "https://www.youtube.com/watch?v=wlkCQXHEgjA"] },
         { id: 2, title: "TechBot Advanced Kit", price: 7499, originalPrice: 8999, rating: 4.7, image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", description: "This Robotic Kit is suitable for kids age 10 and above which will reduce the screen timing and increase the curiosity for innovation.Using this kit, children can make various projects which will solve real life problems.", features: ["1. Easy-to-build breadboard basic electronic circuit model and basics of coding."," ", "2. Blend of fun and learning to build electronic DIY circuits."," ","3. Hands-on experience in building 25 different types of projects."," ", "4. No soldering required, appropriate for age 9 years and above."," ", "5. Engaging educational kit for young explorers."], images: ["https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", "https://videos.pexels.com/video-files/856247/856247-hd_1920_1080_30fps.mp4"] },

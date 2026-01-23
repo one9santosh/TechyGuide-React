@@ -28,14 +28,16 @@
 
 /* --- Hero Section (Flexbox Flexible) --- */
 .workshop-page-root .hero { 
-	padding: 80px 0; 
+	padding: 60px 0; 
 	background: radial-gradient(circle at top left, #eafcf9, white); 
 	overflow: visible; 
 	position: relative; 
 	display: flex; 
 	align-items: center; 
 	justify-content: center;
-	min-height: 117vh;
+	min-height: 113vh;
+	margin-top: -100px;
+	padding-top: 90px;
 }
 .workshop-page-root .hero-bg-shape { position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; background: rgba(255,123,0,0.05); border-radius: 50%; z-index: 0; }
 
@@ -253,3 +255,11 @@
 	}
 	.workshop-page-root .masonry-grid::-webkit-scrollbar { display: none; }
 }
+
+/* =========================================
+   ANIMATION CLASSES
+   ========================================= */
+.workshop-page-root .hidden-left { opacity: 0; transform: translateX(-30px); transition: 0.8s; }
+.workshop-page-root .hidden-right { opacity: 0; transform: translateX(30px); transition: 0.8s; }
+.workshop-page-root .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.workshop-page-root .show { opacity: 1; transform: translate(0); }

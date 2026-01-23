@@ -288,8 +288,8 @@
     .composite-skill-lab-root .hero-visual { width: 100%; }
     .composite-skill-lab-root .main-hero-img { max-width: 100%; }
     .composite-skill-lab-root .floating-badge { display: none !important; }
-    .composite-skill-lab-root .hero-btns { display: flex; flex-direction: column; gap: 15px; }
-    .composite-skill-lab-root .btn { width: 100%; }
+    .composite-skill-lab-root .hero-btns { display: flex; justify-content: center; }
+    .composite-skill-lab-root .btn { width: auto; }
     
     .composite-skill-lab-root .guidelines-section { padding: 50px 0; }
     .composite-skill-lab-root .section-heading { font-size: 1.8rem; }

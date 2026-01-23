@@ -13,6 +13,22 @@ import bgImage1 from '../assets/ProductE-BloxImages/9743528.png';
 import bgImage2 from '../assets/ProductE-BloxImages/5073198.jpg';
 
 export default function EBlox() {
+        // Animation observer for scroll-triggered animations
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("show");
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+        }, []);
+
         // WhatsApp form submission handler
         useEffect(() => {
             const form = document.getElementById('inquiry-form');

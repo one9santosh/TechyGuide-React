@@ -14,6 +14,20 @@ import bgImage2 from '../assets/ProductTeBoTImages/5073198.jpg';
 
 function TeBoT() {
     useEffect(() => {
+        // Animation observer for scroll-triggered animations
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        document.querySelectorAll(".hidden-left, .hidden-right, .fade-up").forEach((el) => observer.observe(el));
+
         console.log('TeBoT page loaded successfully');
         
         // Get main elements
@@ -111,14 +125,14 @@ function TeBoT() {
         }
 
         // Enhanced Intersection Observer for smoother fade-in animations
-        const observer = new IntersectionObserver((entries) => {
+        const fadeInObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
                     }, index * 100);
-                    observer.unobserve(entry.target);
+                    fadeInObserver.unobserve(entry.target);
                 }
             });
         }, { 
@@ -132,7 +146,7 @@ function TeBoT() {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            observer.observe(el);
+            fadeInObserver.observe(el);
         });
 
         // Enhanced auto-scroll function with smoother animation

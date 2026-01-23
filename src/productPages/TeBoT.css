@@ -975,3 +975,11 @@
 .tebot-page-root .inquiry-form textarea::placeholder {
     color: rgba(0, 0, 0, 0.5);
 }
+
+/* =========================================
+   ANIMATION CLASSES
+   ========================================= */
+.tebot-page-root .hidden-left { opacity: 0; transform: translateX(-30px); transition: 0.8s; }
+.tebot-page-root .hidden-right { opacity: 0; transform: translateX(30px); transition: 0.8s; }
+.tebot-page-root .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.tebot-page-root .show { opacity: 1; transform: translate(0); }
